@@ -1,32 +1,56 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en"><head>
+<!-- demo-chrome --><meta name="theme-color" content="#f4f2ec"><link rel="icon" href="https://pranavgudise.dev/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="https://pranavgudise.dev/kit/demo.css"><!-- /demo-chrome -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f2ec">
 <title>Complaint tagger go-live gate: GO</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--fg:#111;--bg:#fff;--muted:#666;--line:#ddd;--soft:#f5f5f5}
-@media (prefers-color-scheme:dark){:root{--fg:#eee;--bg:#111;--muted:#999;--line:#333;--soft:#1b1b1b}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
-font:15px/1.5 Inter,system-ui,sans-serif}main{max-width:880px;margin:0 auto;padding:32px 16px 64px}
-h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:32px 0 8px}
-.decision{display:inline-block;border:2px solid var(--fg);padding:2px 10px;font-weight:700;margin-left:6px}
-.muted{color:var(--muted)}table{border-collapse:collapse;width:100%;font-size:14px}
-td,th{text-align:left;border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top}
-.scroll{overflow-x:auto}details{border-bottom:1px solid var(--line);padding:8px 0}
-summary{cursor:pointer}.mark{display:inline-block;width:18px;font-weight:700}.bad{color:var(--fg)}
-.run{margin:8px 0 8px 22px}.runhead{font-weight:600;font-size:13px}ul{margin:4px 0;padding-left:18px}
-li.fail{font-weight:600}li.na{color:var(--muted)}pre{background:var(--soft);padding:8px;overflow-x:auto;
-font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size:13px}
-</style></head><body><main>
-<h1>Complaint tagger go-live gate <span class="decision">GO</span></h1>
-<p class="muted">Agent <code>agent:llm_recorded</code>, 76 cases, 1 run(s). Agent cost $0.0138, judge cost $0.0000, mean latency 0.2 ms per case.</p>
-<ul><li>every rule held on all 1 run(s), no critical failures</li></ul>
+:root{--paper:#f4f2ec;--ink:#1b1a17;--ink-2:#57544c;--rule:rgb(27 26 23/.14);--green:#24513c;--wash:#dce6dc;
+--serif:"Libre Caslon Display",Georgia,serif;--sans:"General Sans","Helvetica Neue",Arial,sans-serif;
+--mono:"Red Hat Mono",ui-monospace,Menlo,monospace;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--sans)}
+::selection{background:var(--wash)}a{color:var(--green);text-underline-offset:3px}
+main{width:min(1080px,calc(100% - 64px));margin:0 auto;padding:0 0 64px}
+h1{font:400 clamp(30px,3.6vw,46px)/1.15 var(--serif);letter-spacing:-.01em;margin:56px 0 18px;text-wrap:balance}
+h2{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border:1px solid var(--ink);
+border-radius:999px;font:400 21px/1.1 var(--serif);margin:56px 0 20px}
+.lead,h1+p{font-size:18px;color:var(--ink-2);max-width:42em}.muted{color:var(--ink-2)}
+.reasons{padding-left:20px;margin:16px 0 0}.reasons li{margin:6px 0}
+.decision{display:inline-flex;align-items:center;min-height:32px;padding:0 14px;border-radius:999px;
+font:500 15px/1 var(--mono);letter-spacing:.04em;vertical-align:.25em;margin-left:8px;border:1px solid var(--ink)}
+.decision.go{background:var(--wash);border-color:var(--wash);color:var(--green)}
+.decision.no-go{background:var(--ink);color:var(--paper)}.decision.partial{border-style:dashed}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th{font:400 12.5px/1.4 var(--mono);letter-spacing:.02em;color:var(--ink-2);text-align:left;padding:10px 12px 10px 0;
+border-bottom:1px solid var(--ink);white-space:nowrap}
+td{text-align:left;border-bottom:1px solid var(--rule);padding:12px 12px 12px 0;vertical-align:top}
+details{border-bottom:1px solid var(--rule);padding:12px 0}summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+.mark{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:999px;
+font-size:12px;margin-right:4px}.mark.ok{background:var(--wash);color:var(--green)}
+.mark.bad{background:var(--ink);color:var(--paper)}
+.mark svg{width:12px;height:12px}.mark path{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;
+stroke-linejoin:round}summary b{font-weight:500}
+.run{margin:10px 0 10px 28px}.runhead{font:400 12.5px/1.4 var(--mono);letter-spacing:.02em;color:var(--ink-2)}
+ul{margin:4px 0;padding-left:18px}li.pass::marker{color:var(--green)}li.fail{font-weight:500}li.na{color:var(--ink-2)}
+pre{font:400 12.5px/1.55 var(--mono);background:rgb(27 26 23/.045);border-radius:8px;padding:12px 14px;
+overflow-x:auto;margin:6px 0;white-space:pre-wrap;word-break:break-word}
+code{font-family:var(--mono);font-size:.86em}
+footer{margin-top:64px;padding-top:18px;border-top:1px solid var(--rule);font:400 13px/1.5 var(--mono)}
+@media (max-width:700px){main{width:calc(100% - 40px)}h1{margin-top:32px}h2{font-size:19px;margin-top:44px}
+.lead,h1+p{font-size:16.5px}.run{margin-left:12px}}
+</style></head><body>
+<!-- demo-chrome --><header class="demo-top"><a class="demo-brand" href="https://pranavgudise.dev/"><svg class="demo-mark" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.25"/><g class="n"><path class="f" d="M15.5 8.5 L 13.4 13.4 L 8.5 15.5 L 10.6 10.6 Z"/></g><circle class="p" cx="12" cy="12" r=".7"/></svg><span>Pranav Gudise</span></a><a class="pill" href="https://github.com/pg2342-hub/complaint-signal-detector">Code on GitHub</a></header><!-- /demo-chrome -->
+<main>
+<h1>Complaint tagger go-live gate <span class="decision go">GO</span></h1>
+<p class="lead">Agent <code>agent:llm_recorded</code>, 76 cases, 1 run(s). Agent cost $0.0138, judge cost $0.0000, mean latency 0.4 ms per case.</p>
+<ul class="reasons"><li>every rule held on all 1 run(s), no critical failures</li></ul>
 <h2>Pass counts by run</h2><div class="scroll"><table><tr><th>Run</th><th>Passed</th>
 <th>Critical failures</th></tr><tr><td>1</td><td>76 of 76</td><td>0</td></tr></table></div>
 <h2>Gate rules</h2><div class="scroll"><table><tr><th>Rule</th><th>Run</th><th>Passed</th><th>Needs</th>
 <th>Result</th></tr><tr><td>overall</td><td>1</td><td>76 of 76</td><td>69</td><td>held</td></tr><tr><td>free-text reports (no manufacturer template)</td><td>1</td><td>25 of 25</td><td>20</td><td>held</td></tr></table></div>
-<h2>Cases</h2><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED. NO PRODUCT OR DATA WAS PROVIDED FOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+<h2>Cases</h2><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED. NO PRODUCT OR DATA WAS PROVIDED FOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED.&quot;,
@@ -34,7 +58,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
  &quot;latency_s&quot;: 1.723
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. DATA WAS RECEIVED BUT DOES NOT REFLEC</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. DATA WAS RECEIVED BUT DOES NOT REFLEC</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.&quot;,
@@ -42,7 +66,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000147,
  &quot;latency_s&quot;: 1.341
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. PERFORMANCE DATA WAS REVIEWED. THE AL</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. PERFORMANCE DATA WAS REVIEWED. THE AL</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.&quot;,
@@ -50,7 +74,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000154,
  &quot;latency_s&quot;: 1.732
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. IT WAS DETERMINED THAT LOSS OF CONNEC</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. IT WAS DETERMINED THAT LOSS OF CONNEC</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.&quot;,
@@ -58,7 +82,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
  &quot;latency_s&quot;: 1.098
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>SUBSEQUENT TO THE INITIAL MDR, IT WAS DETERMINED THAT A REPORT WAS SUBMITTED IN </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>SUBSEQUENT TO THE INITIAL MDR, IT WAS DETERMINED THAT A REPORT WAS SUBMITTED IN </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
@@ -66,7 +90,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000169,
  &quot;latency_s&quot;: 1.923
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. DATA HAS BEE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. DATA HAS BEE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
@@ -74,7 +98,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
  &quot;latency_s&quot;: 3.173
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS OCCURRED. PERFORMANCE DATA W</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS OCCURRED. PERFORMANCE DATA W</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS OCCURRED.&quot;,
@@ -82,7 +106,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000159,
  &quot;latency_s&quot;: 1.261
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. ON APPROXIMA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. ON APPROXIMA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE PATIENT WAS REPORTEDLY SLEEPING AND DIDN&#x27;T HEAR ANY ALERT&quot;,
@@ -90,7 +114,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000268,
  &quot;latency_s&quot;: 1.206
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. NO PRODUCT O</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. NO PRODUCT O</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
@@ -98,7 +122,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000199,
  &quot;latency_s&quot;: 1.483
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT HAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT HAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
@@ -106,7 +130,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000202,
  &quot;latency_s&quot;: 1.303
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
@@ -114,7 +138,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000201,
  &quot;latency_s&quot;: 1.498
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT ALERT NOTIFICATION OCCURRED. PRODUCT HAS BEEN RECEIVED BUT </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT ALERT NOTIFICATION OCCURRED. PRODUCT HAS BEEN RECEIVED BUT </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT ALERT NOTIFICATION OCCURRED.&quot;,
@@ -122,7 +146,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000187,
  &quot;latency_s&quot;: 1.556
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) AND THE BLOOD GLUCOSE (BG) METER OCCURRED&quot;,
@@ -130,7 +154,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000196,
  &quot;latency_s&quot;: 1.248
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS THAT AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) AND THE B</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS THAT AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) AND THE B</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE PATIENT EXPERIENCED INACCURATE CGM VALUES WHICH OCCURRED 5 DAYS AFTER THE SENSOR&quot;,
@@ -138,7 +162,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00024,
  &quot;latency_s&quot;: 1.063
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
@@ -146,7 +170,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000159,
  &quot;latency_s&quot;: 2.185
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
@@ -154,7 +178,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000153,
  &quot;latency_s&quot;: 1.171
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED NEEDLE OR CANNULA OCCURRED. THE SENSOR WAS INSER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DETACHED NEEDLE OR CANNULA OCCURRED. THE SENSOR WAS INSER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A DETACHED NEEDLE OR CANNULA OCCURRED.&quot;,
@@ -162,7 +186,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000152,
  &quot;latency_s&quot;: 1.499
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. NO PRODUCT OR D</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. NO PRODUCT OR D</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
@@ -170,7 +194,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000149,
  &quot;latency_s&quot;: 1.824
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED. PER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED. PER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED.&quot;,
@@ -178,7 +202,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000176,
  &quot;latency_s&quot;: 1.416
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED. P</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED. P</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE&quot;,
@@ -186,7 +210,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000328,
  &quot;latency_s&quot;: 2.096
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED. THE WEARABLE WAS INSERTED INT</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED. THE WEARABLE WAS INSERTED INT</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED.&quot;,
@@ -194,7 +218,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000207,
  &quot;latency_s&quot;: 1.246
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THERE WAS REDNESS AND SWELLING NOTED AT THE INSERTION SITE&quot;,
@@ -202,7 +226,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000206,
  &quot;latency_s&quot;: 1.386
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION OCCURRED.&quot;,
@@ -210,7 +234,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000326,
  &quot;latency_s&quot;: 1.308
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYST</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYST</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYSTEM&quot;,
@@ -218,7 +242,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000202,
  &quot;latency_s&quot;: 1.213
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED. PRODUCT HAS BEEN RECE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED. PRODUCT HAS BEEN RECE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A RECEIVER REINITIALIZATION OCCURRED&quot;,
@@ -226,7 +250,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000158,
  &quot;latency_s&quot;: 1.145
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED. NO PRODUCT OR DATA WA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED. NO PRODUCT OR DATA WA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A RECEIVER REINITIALIZATION OCCURRED.&quot;,
@@ -234,7 +258,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000144,
  &quot;latency_s&quot;: 1.125
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED. PRODUCT HAS BEEN </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED. PRODUCT HAS BEEN </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED.&quot;,
@@ -242,7 +266,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000182,
  &quot;latency_s&quot;: 1.264
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED. IT WAS INDICATED </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED. IT WAS INDICATED </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;UNEXPECTED RECEIVER SHUTDOWN OCCURRED&quot;,
@@ -250,7 +274,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000167,
  &quot;latency_s&quot;: 1.159
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT THE READINGS FROZE. IT WAS INDICATED THAT THE PATIENT WAS U</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT THE READINGS FROZE. IT WAS INDICATED THAT THE PATIENT WAS U</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT THE READINGS FROZE.&quot;,
@@ -258,7 +282,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000164,
  &quot;latency_s&quot;: 1.539
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT THE READINGS FROZE. PRODUCT WAS PROVIDED FOR INVESTIGATION.</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT THE READINGS FROZE. PRODUCT WAS PROVIDED FOR INVESTIGATION.</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE READINGS FROZE&quot;,
@@ -266,7 +290,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000136,
  &quot;latency_s&quot;: 1.04
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT THE READINGS FROZE. THE SENSOR WAS INSERTED INTO THE ARM ON</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT THE READINGS FROZE. THE SENSOR WAS INSERTED INTO THE ARM ON</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE READINGS FROZE.&quot;,
@@ -274,7 +298,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000141,
  &quot;latency_s&quot;: 1.897
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. IT WAS INDICATED THAT THE OPER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. IT WAS INDICATED THAT THE OPER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED.&quot;,
@@ -282,7 +306,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
  &quot;latency_s&quot;: 2.392
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED. THE WEARABLE WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED. THE WEARABLE WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED&quot;,
@@ -290,7 +314,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000226,
  &quot;latency_s&quot;: 1.271
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED. G7 WEARABLE AND APPLICATOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED. G7 WEARABLE AND APPLICATOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED.&quot;,
@@ -298,7 +322,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000239,
  &quot;latency_s&quot;: 1.421
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A WEARABLE FAILURE OCCURRED. THE WEARABLE WAS INSERTED INTO</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A WEARABLE FAILURE OCCURRED. THE WEARABLE WAS INSERTED INTO</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS SHOWING A SENSOR FAILURE&quot;,
@@ -306,7 +330,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00025,
  &quot;latency_s&quot;: 1.218
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION OCCURRED.&quot;,
@@ -314,7 +338,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00022,
  &quot;latency_s&quot;: 2.459
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM G7 IS FAILING MY SON! OFFICIALLY DONE WITH DEXCOM G7. G7 SUCKS. THEY ARE </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM G7 IS FAILING MY SON! OFFICIALLY DONE WITH DEXCOM G7. G7 SUCKS. THEY ARE </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;WE HAVE HAD 9, YES NINE, FAIL EARLY.&quot;,
@@ -322,7 +346,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000218,
  &quot;latency_s&quot;: 1.232
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
@@ -330,7 +354,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000173,
  &quot;latency_s&quot;: 1.192
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>CGM ACCURACY. THE SENSOR WAS INSERTED INTO THE ABDOMEN, WHICH IS OFF-LABEL USAGE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>CGM ACCURACY. THE SENSOR WAS INSERTED INTO THE ABDOMEN, WHICH IS OFF-LABEL USAGE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;CGM ACCURACY. THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE OF THE PARKES ERROR GRID.&quot;,
@@ -338,7 +362,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000162,
  &quot;latency_s&quot;: 1.148
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/11/2025, THAT ON (B)(6) 2025, THE PATIENT EXPERIENCE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM WAS MADE AWARE ON 02/11/2025, THAT ON (B)(6) 2025, THE PATIENT EXPERIENCE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE PATIENT EXPERIENCED A SKIN REACTION&quot;,
@@ -346,7 +370,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000186,
  &quot;latency_s&quot;: 3.443
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/13/2025, THAT ON THE SAME DAY, THE PATIENT EXPERIENC</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM WAS MADE AWARE ON 02/13/2025, THAT ON THE SAME DAY, THE PATIENT EXPERIENC</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE PATIENT DEVELOPED A PUSTULE AND A SKIN INFECTION AT THE NEEDLE PUNCTURE SITE&quot;,
@@ -354,7 +378,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000196,
  &quot;latency_s&quot;: 1.141
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>READING IS STUCK AT 208.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>READING IS STUCK AT 208.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;READING IS STUCK AT 208.&quot;,
@@ -362,7 +386,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000125,
  &quot;latency_s&quot;: 0.926
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
@@ -370,7 +394,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00016,
  &quot;latency_s&quot;: 1.24
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/16/2025, THAT ON (B)(6)2025, THE PATIENT EXPERIENCED</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM WAS MADE AWARE ON 02/16/2025, THAT ON (B)(6)2025, THE PATIENT EXPERIENCED</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE PATIENT EXPERIENCED A SKIN REACTION&quot;,
@@ -378,7 +402,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000193,
  &quot;latency_s&quot;: 1.269
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/18/2025, THAT ON (B)(6) 2025, THE PATIENT EXPERIENCE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM WAS MADE AWARE ON 02/18/2025, THAT ON (B)(6) 2025, THE PATIENT EXPERIENCE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE PATIENT EXPERIENCED INFLAMMATION AND PAIN THAT EXTENDED BEYOND THE PATCH PERIMETER&quot;,
@@ -386,7 +410,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00019,
  &quot;latency_s&quot;: 1.149
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
@@ -394,7 +418,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00016,
  &quot;latency_s&quot;: 1.265
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTED INTO THE AB</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTED INTO THE AB</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED.&quot;,
@@ -402,7 +426,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
  &quot;latency_s&quot;: 1.324
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>CGM ACCURACY. THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE OF THE PARKES E</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>CGM ACCURACY. THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE OF THE PARKES E</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE OF THE PARKES ERROR GRID&quot;,
@@ -410,7 +434,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000164,
  &quot;latency_s&quot;: 2.079
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DON ABBEY ORG Q1 2025 &quot;ALL HANDS&quot; MEETING.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DON ABBEY ORG Q1 2025 &quot;ALL HANDS&quot; MEETING.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;other&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;DON ABBEY ORG Q1 2025 \&quot;ALL HANDS\&quot; MEETING.&quot;,
@@ -418,7 +442,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000135,
  &quot;latency_s&quot;: 2.588
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>OUT OF 3 MONTH SUPPLY, 3 DEXCOM7 FAILED, THAT AMOUNTS TO 1 MONTH SUPPLY OF DEXCO</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>OUT OF 3 MONTH SUPPLY, 3 DEXCOM7 FAILED, THAT AMOUNTS TO 1 MONTH SUPPLY OF DEXCO</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;3 DEXCOM7 FAILED, THAT AMOUNTS TO 1 MONTH SUPPLY&quot;,
@@ -426,7 +450,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000296,
  &quot;latency_s&quot;: 2.089
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>AFTER SUBMISSION OF THE INITIAL MDR, PRODUCT WAS RECEIVED ON 2/18/2025 AND IT WA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>AFTER SUBMISSION OF THE INITIAL MDR, PRODUCT WAS RECEIVED ON 2/18/2025 AND IT WA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
@@ -434,7 +458,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
  &quot;latency_s&quot;: 1.075
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED. DATA WAS PROVIDED FOR INVESTIGATI</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED. DATA WAS PROVIDED FOR INVESTIGATI</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED.&quot;,
@@ -442,7 +466,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000145,
  &quot;latency_s&quot;: 1.246
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>2 DEXCOM SENSORS FELL OFF WITHIN 24 HOURS OF USING. DEXCOM REFUSES TO REPLACE. I</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>2 DEXCOM SENSORS FELL OFF WITHIN 24 HOURS OF USING. DEXCOM REFUSES TO REPLACE. I</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;2 DEXCOM SENSORS FELL OFF WITHIN 24 HOURS OF USING&quot;,
@@ -450,7 +474,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000159,
  &quot;latency_s&quot;: 1.206
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>THE REPORTER CALLED IN TO REPORT HER SENSOR FELL OFF IN THE MIDDLE OF THE NIGHT </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>THE REPORTER CALLED IN TO REPORT HER SENSOR FELL OFF IN THE MIDDLE OF THE NIGHT </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;HER SENSOR FELL OFF IN THE MIDDLE OF THE NIGHT&quot;,
@@ -458,7 +482,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000161,
  &quot;latency_s&quot;: 1.141
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ADVERSE EVENT OCCURRED. ON (B)(6) 2025 AT APPROXIMATELY </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT AN ADVERSE EVENT OCCURRED. ON (B)(6) 2025 AT APPROXIMATELY </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE SENSOR IMMEDIATELY REGISTERED A \&quot;LOW\&quot; GLUCOSE READING&quot;,
@@ -466,7 +490,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000248,
  &quot;latency_s&quot;: 2.625
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION OCCURRED.&quot;,
@@ -474,7 +498,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000206,
  &quot;latency_s&quot;: 2.489
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.&quot;,
@@ -482,7 +506,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
  &quot;latency_s&quot;: 1.252
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.&quot;,
@@ -490,7 +514,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
  &quot;latency_s&quot;: 1.255
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.&quot;,
@@ -498,7 +522,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
  &quot;latency_s&quot;: 1.196
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED&quot;,
@@ -506,7 +530,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000158,
  &quot;latency_s&quot;: 0.99
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED.&quot;,
@@ -514,7 +538,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000162,
  &quot;latency_s&quot;: 1.403
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. DATA WAS EVALUATED AND THE ALL</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. DATA WAS EVALUATED AND THE ALL</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A DEXCOM APP CRASH OCCURRED&quot;,
@@ -522,7 +546,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00014,
  &quot;latency_s&quot;: 1.128
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. NO DATA OR PRODUCT WAS PROVIDE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. NO DATA OR PRODUCT WAS PROVIDE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;A DEXCOM APP CRASH OCCURRED&quot;,
@@ -530,7 +554,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00014,
  &quot;latency_s&quot;: 1.126
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>MY DEXCOM G7 SENSOR CONTINUES TO GIVE INACCURATE READINGS MAKING MY SAFETY BECOM</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>MY DEXCOM G7 SENSOR CONTINUES TO GIVE INACCURATE READINGS MAKING MY SAFETY BECOM</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;MY DEXCOM G7 SENSOR CONTINUES TO GIVE INACCURATE READINGS&quot;,
@@ -538,7 +562,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000147,
  &quot;latency_s&quot;: 1.218
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM G7 CGM SENSOR ISSUES. CONSTANT WRONG READINGS. FAILURE TO EJECT WHEN APPL</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM G7 CGM SENSOR ISSUES. CONSTANT WRONG READINGS. FAILURE TO EJECT WHEN APPL</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;CONSTANT WRONG READINGS. FAILURE TO EJECT WHEN APPLYING SENSOR&quot;,
@@ -546,7 +570,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000189,
  &quot;latency_s&quot;: 1.412
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>REPORTER STATED THAT THEY HAD TWO OF THREE DEXCOM G7 SENSOR FAILURES YESTERDAY. </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>REPORTER STATED THAT THEY HAD TWO OF THREE DEXCOM G7 SENSOR FAILURES YESTERDAY. </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;TWO OF THREE DEXCOM G7 SENSOR FAILURES YESTERDAY&quot;,
@@ -554,7 +578,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000149,
  &quot;latency_s&quot;: 1.416
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>ON (B)(6) 2024 PATIENT RECEIVED DEXCOM G7. TEN DAYS LATER WHEN THE SENSORS NEEDE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>ON (B)(6) 2024 PATIENT RECEIVED DEXCOM G7. TEN DAYS LATER WHEN THE SENSORS NEEDE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;EIGHT SENSORS WERE MISSING THE INJECTION SPRING THAT LATCHES ONTO THE SKIN&quot;,
@@ -562,7 +586,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000178,
  &quot;latency_s&quot;: 1.08
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>TYPE 1 DIABETIC USING DEXCOM G7 CGM DEVICE. DEVICE HAS OFTEN FAILED IN THE MIDDL</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>TYPE 1 DIABETIC USING DEXCOM G7 CGM DEVICE. DEVICE HAS OFTEN FAILED IN THE MIDDL</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;DEVICE HAS OFTEN FAILED IN THE MIDDLE OF THE NIGHT&quot;,
@@ -570,7 +594,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00021,
  &quot;latency_s&quot;: 1.62
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>MY DEXCOM G7 FAILED. THIS LOT NUMBER HAS HAD CONTINUOUS ISSUES.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>MY DEXCOM G7 FAILED. THIS LOT NUMBER HAS HAD CONTINUOUS ISSUES.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;MY DEXCOM G7 FAILED. THIS LOT NUMBER HAS HAD CONTINUOUS ISSUES.&quot;,
@@ -578,7 +602,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000148,
  &quot;latency_s&quot;: 1.612
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>MY DEXCOM G7 SENSOR BEGAN LIFTING. NOT THE STICKER THAT HOLDS IT IN PLACE, THE S</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>MY DEXCOM G7 SENSOR BEGAN LIFTING. NOT THE STICKER THAT HOLDS IT IN PLACE, THE S</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;MY DEXCOM G7 SENSOR BEGAN LIFTING&quot;,
@@ -586,7 +610,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00014,
  &quot;latency_s&quot;: 1.41
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I WEAR THE DEXCOM G7 THE PROBLEM IS THAT 1 OF EVERY 3 SENSORS FALL OFF I USE THE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>I WEAR THE DEXCOM G7 THE PROBLEM IS THAT 1 OF EVERY 3 SENSORS FALL OFF I USE THE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;1 OF EVERY 3 SENSORS FALL OFF&quot;,
@@ -594,7 +618,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000154,
  &quot;latency_s&quot;: 1.322
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>OMNIPOD AND DEXCOM 7 CAUSED HYPOGLYCEMIA BY OVERDOSING INSULIN DUE TO INCORRECT </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>OMNIPOD AND DEXCOM 7 CAUSED HYPOGLYCEMIA BY OVERDOSING INSULIN DUE TO INCORRECT </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;CGM READING WAS OFF BY OVER 100 POINTS&quot;,
@@ -602,7 +626,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000151,
  &quot;latency_s&quot;: 1.189
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I USE DEXCOM G7 GLUCOSE MONITORING DEVICE. IT&#x27;S ALWAYS WORKED GREAT UP UNTIL REC</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>I USE DEXCOM G7 GLUCOSE MONITORING DEVICE. IT&#x27;S ALWAYS WORKED GREAT UP UNTIL REC</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;FAILED TO INITIALLY PAIR WITH MY PHONE&quot;,
@@ -610,7 +634,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000183,
  &quot;latency_s&quot;: 1.168
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM G7 SENSOR APPLICATION FAILURE. THIS HAPPENED ON 7 OF THE 9 DEXCOM G7 SENS</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>DEXCOM G7 SENSOR APPLICATION FAILURE. THIS HAPPENED ON 7 OF THE 9 DEXCOM G7 SENS</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 1 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;DEXCOM G7 SENSOR APPLICATION FAILURE. THIS HAPPENED ON 7 OF THE 9&quot;,
@@ -618,7 +642,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000159,
  &quot;latency_s&quot;: 1.486
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I&#x27;VE HAD MANY SENSOR FAILURES OF THE DEXCOM G7 OVER THE LAST SEVERAL MONTHS. TYP</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>I&#x27;VE HAD MANY SENSOR FAILURES OF THE DEXCOM G7 OVER THE LAST SEVERAL MONTHS. TYP</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE DEVICE FAILS SEVERAL TIMES A DAY FOR HOURS ON END AND USUALLY DOESN&#x27;T RECONNECT&quot;,
@@ -626,7 +650,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000191,
  &quot;latency_s&quot;: 1.045
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I USE THE DEXCOM G7 CGM FOR MY TYPE 1 DIABETES. THERE IS A QUALITY CONTROL ISSUE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'><svg viewBox="0 0 12 12" aria-label="passed"><path d="M2.6 6.3 5 8.6 9.4 3.6"/></svg></span> <b>I USE THE DEXCOM G7 CGM FOR MY TYPE 1 DIABETES. THERE IS A QUALITY CONTROL ISSUE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;llm&quot;,
  &quot;evidence&quot;: &quot;THE SENSORS DO NOT ALWAYS DEPLOY, MAKING THEM DEFECTIVE AND PREVENTING USE.&quot;,
@@ -637,4 +661,5 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
 }</pre></div></details>
 <h2>Checks</h2><div class="scroll"><table><tr><td><code>mode</code></td><td></td><td>The tag is the labeled failure mode.</td></tr><tr><td><code>safety_not_hidden</code></td><td>critical</td><td>A report labeled with a safety mode (alerts, inaccurate readings, skin reactions) is tagged with that mode or sent to a person, never silently filed under another mode.</td></tr></table></div>
 <footer class="muted">Made with <a href="https://github.com/pg2342-hub/golive-gate">golive-gate</a>.</footer>
-</main></body></html>
+</main><!-- demo-chrome --><footer class="demo-foot"><span>A working build by <a href="https://pranavgudise.dev/">Pranav Gudise</a>. Synthetic or public data only.</span><a href="https://github.com/pg2342-hub/complaint-signal-detector">github.com/pg2342-hub/complaint-signal-detector</a></footer><!-- /demo-chrome -->
+</body></html>

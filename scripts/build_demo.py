@@ -48,11 +48,11 @@ def sparkline(series: dict, totals: dict, points: list[dict], mode: str, events:
     line = " ".join(f"{x:.1f},{y:.1f}" for x, y in zip(xs, ys, strict=True))
     flagged = {p["month"] for p in points if p["mode"] == mode and p["flagged"]}
     dots = "".join(
-        f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#000"><title>{e(month_name(m))}: flagged</title></circle>'
+        f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#24513c"><title>{e(month_name(m))}: flagged</title></circle>'
         for x, y, m in zip(xs, ys, months, strict=True)
         if m in flagged
     )
-    marks = ""
+    marks, k = "", 0
     for ev in events:
         if ev["mode"] != mode:
             continue
@@ -60,13 +60,14 @@ def sparkline(series: dict, totals: dict, points: list[dict], mode: str, events:
         if ym in months:
             x = xs[months.index(ym)]
             marks += (
-                f'<line x1="{x:.1f}" x2="{x:.1f}" y1="0" y2="{h}" stroke="#000" stroke-dasharray="3,3"/>'
-                f'<text x="{x + 3:.1f}" y="11" font-size="10">{e(ev["short"])}</text>'
+                f'<line x1="{x:.1f}" x2="{x:.1f}" y1="0" y2="{h}" stroke="#57544c" stroke-dasharray="3,3"/>'
+                f'<text x="{x + 3:.1f}" y="{11 + 13 * (k % 2)}" font-size="10">{e(ev["short"])}</text>'
             )
+            k += 1
     first, last = month_name(months[0]), month_name(months[-1])
     return (
         f'<svg viewBox="0 0 {w} {h + 16}" role="img" aria-label="{e(LABEL[mode])} share by month">'
-        f'<polyline points="{line}" fill="none" stroke="#000" stroke-width="1.5"/>{dots}{marks}'
+        f'<polyline points="{line}" fill="none" stroke="#24513c" stroke-width="1.5"/>{dots}{marks}'
         f'<text x="{pad}" y="{h + 14}" font-size="10">{first}</text>'
         f'<text x="{w - pad}" y="{h + 14}" font-size="10" text-anchor="end">{last}</text></svg>'
     )
@@ -93,7 +94,7 @@ def eval_rows() -> str:
         cost_s = f"${cost * 1000:.3f} per 1,000" if cost else "free"
         link = f'<a href="eval/{key}/">every case</a>'
         rows.append(
-            f"<tr><td>{e(title)}</td><td><b>{e(r['decision'].upper())}</b></td><td>{ok} of {n}</td>"
+            f"<tr><td>{e(title)}</td><td><span class='badge {e(r['decision'])}'>{e(r['decision'].upper())}</span></td><td>{ok} of {n}</td>"
             f"<td>{free_ok} of {len(free)}</td><td>{crit}</td><td>{review}</td><td>{cost_s}</td><td>{lat_s}</td><td>{link}</td></tr>"
         )
         dst = DOCS / "eval" / key
@@ -191,18 +192,23 @@ def main() -> None:
 
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Complaint signal detector</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body{{font-family:Inter,system-ui,sans-serif;color:#000;background:#fff;max-width:900px;margin:0 auto;padding:24px 16px 64px;line-height:1.5}}
-h1{{font-size:28px;margin:0 0 4px}} h2{{font-size:20px;margin:36px 0 8px;border-bottom:2px solid #000;padding-bottom:4px}}
-h3{{font-size:16px;margin:0 0 6px}} h4{{font-size:13px;margin:0 0 4px;font-weight:600}}
-a{{color:#000}} .muted{{color:#555;font-size:13px}} code{{font-size:12px}}
-table{{border-collapse:collapse;width:100%;font-size:14px}} td,th{{border-bottom:1px solid #ccc;padding:8px 6px;text-align:left;vertical-align:top}}
-.card{{border:1px solid #000;padding:12px 14px;margin:10px 0}} .ex{{font-size:12px;color:#333;padding-left:18px}}
-.chart{{margin:14px 0}} svg{{width:100%;height:auto;max-width:600px}} .wrap{{overflow-x:auto}}
-.kpi{{display:flex;gap:24px;flex-wrap:wrap;margin:12px 0}} .kpi div{{border-left:3px solid #000;padding-left:10px}}
-.kpi b{{display:block;font-size:22px}}
-</style></head><body>
+main{{padding-bottom:24px}}
+h1+.muted{{font-size:18px}}
+.muted{{color:var(--ink-2);font-size:15px;max-width:46em}}
+h3{{font:400 21px/1.25 var(--serif);margin:0 0 8px}}
+h4{{font:400 12.5px/1.4 var(--mono);letter-spacing:.02em;color:var(--ink-2);margin:0 0 8px}}
+.card{{margin:16px 0}}
+.card p{{font-size:15px}}
+.ex{{font-size:14px;color:var(--ink-2);padding-left:18px}}
+.chart{{margin:24px 0}}
+.chart svg{{width:100%;height:auto;max-width:640px;overflow:visible}}
+.chart svg text{{font-family:var(--mono);fill:var(--ink-2)}}
+.wrap{{overflow-x:auto;margin:16px 0}}
+.kpi{{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:40px 0 8px}}
+.kpi div{{border:1px solid var(--rule);border-radius:16px;padding:18px 20px;font-size:14px;color:var(--ink-2)}}
+.kpi b{{display:block;font:400 32px/1.15 var(--serif);color:var(--ink);margin-bottom:6px;font-variant-numeric:tabular-nums}}
+</style></head><body><main>
 <h1>Complaint signal detector</h1>
 <p class="muted">Public FDA adverse event reports for the {e(PRODUCT.name)}, scanned for failure modes that are rising.
 Data from openFDA, last updated {e(series["openfda_last_updated"])}. <a href="{REPO}">Code on GitHub</a>.</p>
@@ -250,13 +256,16 @@ this same set, so treat the guardrail row as tuned, not held out. The model's an
 <li><b>Gate.</b> The tagger only ships if it passes the eval gate in CI.</li>
 </ol>
 <p class="muted">Limits: openFDA narratives are blank for many of the latest reports, which can hide a rise but not create one. Report counts are not failure rates. This page reads public data only and says nothing about causes.</p>
-<pre style="font-size:12px;background:#f4f4f4;padding:10px;overflow-x:auto">pip install -e ".[claude]"
+<pre>pip install -e ".[claude]"
 csd snapshot &amp;&amp; csd detect &amp;&amp; csd backtest
 golive run eval/golive.yml --agent agent:rules_agent</pre>
-</body></html>"""
+</main></body></html>"""
     DOCS.mkdir(exist_ok=True)
     (DOCS / "index.html").write_text(page)
     (DOCS / ".nojekyll").write_text("")
+    import subprocess
+    pages = [str(DOCS / "index.html")] + [str(p) for p in sorted(DOCS.glob("eval/*/index.html"))]
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "demo_chrome.py"), *pages, "--repo", "complaint-signal-detector"], check=True)
     print("wrote docs/index.html")
 
 
