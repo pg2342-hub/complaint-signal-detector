@@ -36,6 +36,9 @@ jobs:
         run: |
           csd tag-eval
           csd unexplained
+      - name: Score the recorded Claude answers (latest run's, or the committed ones)
+        if: hashFiles('data/llm_eval_tags.json') != ''
+        run: |
           golive run eval/golive.yml --agent agent:llm_recorded --out reports/llm || true
           golive run eval/golive.yml --agent agent:hybrid_recorded --out reports/hybrid || true
       - name: Build the demo page

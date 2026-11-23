@@ -136,7 +136,17 @@ def main() -> None:
             fm = r["timeline"][[t["as_of"] for t in r["timeline"]].index(r["first_flag_as_of"])]["flagged_months"][0]
             res += f": {month_name(fm['month'])} at {fm['ratio']:.1f}x its baseline share."
         else:
-            res = "<b>Not flagged before the event.</b> The rise shows up in reports of events after the notice."
+            best = max(
+                (t["strongest"] for t in r["timeline"] if t["strongest"] and t["as_of"] <= r["date"]),
+                key=lambda x: x["ratio"],
+                default=None,
+            )
+            res = "<b>Not flagged before the event.</b>"
+            if best:
+                res += (
+                    f" Strongest sign in the window: {month_name(best['month'])} at {best['ratio']:.1f}x its baseline share"
+                    f" ({best['observed']:,} reports), short of the flag bar."
+                )
         bt_html += (
             f"<tr><td>{fmt_date(r['date'])}</td><td><a href='{e(r['source'])}'>{e(r['title'])}</a><br>"
             f"<span class='muted'>{e(r['detail'])}</span></td><td>{e(LABEL[r['mode']])}</td><td>{res}</td></tr>"
@@ -167,6 +177,12 @@ def main() -> None:
             f"{unexplained['rules_unplaced']} not placed by the rules. Claude, after guardrails: {e(dist)}. "
             f"New wording that keeps showing up becomes a new phrase, after a person reviews it.</p>"
         )
+    if PRODUCT.phrase_log:
+        items = "".join(
+            f"<li>{fmt_date(p['date'])}: <code>{e(p['phrase'])}</code> added to {e(LABEL[p['mode']])}. {e(p['note'])}</li>"
+            for p in PRODUCT.phrase_log
+        )
+        unexp += f"<h3>Phrases added after review</h3><ul>{items}</ul>"
 
     page = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Complaint signal detector</title>
@@ -195,7 +211,7 @@ Data from openFDA, last updated {e(series["openfda_last_updated"])}. <a href="{R
 {sig_html}
 
 <h2>Backtest: would it have seen it coming?</h2>
-<p class="muted">For each public FDA action, the detector is replayed weekly on only the reports FDA had received by that date.</p>
+<p class="muted">For each public FDA action, the detector is replayed weekly for the 12 weeks before it, on only the reports FDA had received by each date. A flag counts only if it is on one of the three event months before that date, so a spike from an earlier issue is not credited to a later one.</p>
 <div class="wrap"><table><tr><th>Date</th><th>FDA action</th><th>Mode</th><th>Result</th></tr>{bt_html}</table></div>
 <p>Public reports reach FDA up to 30 days after the manufacturer hears of an event, and recent months fill in slowly.
 A manufacturer's own complaint feed sees the same reports weeks earlier, which is where this detector belongs.</p>

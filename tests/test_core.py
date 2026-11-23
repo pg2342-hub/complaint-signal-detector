@@ -190,3 +190,15 @@ def test_eval_checks_return_valid_verdicts():
     assert got == {"mode": "fail", "safety_not_hidden": "fail"}
     got = {c.id: c.run(case, {"mode": "needs_review"}).result for c in mod.checks}
     assert got == {"mode": "fail", "safety_not_hidden": "pass"}
+
+
+def test_template_override_reads_only_the_allegation_sentence():
+    text = (
+        "IT WAS REPORTED THAT AN ADVERSE EVENT OCCURRED. THE SENSOR SHOWED A LOW READING THAT WAS WRONG. "
+        "LATER THE SENSOR CAME OFF."
+    )
+    llm = Tag("inaccurate_readings", "llm", evidence="SHOWED A LOW READING", confidence=0.9)
+    assert guard(PRODUCT, text, llm).mode == "inaccurate_readings"
+    text2 = "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. THE APP CRASHED."
+    llm2 = Tag("app_software", "llm", evidence="THE APP CRASHED", confidence=0.9)
+    assert guard(PRODUCT, text2, llm2).mode == "signal_loss"

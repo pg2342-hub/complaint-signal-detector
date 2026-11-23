@@ -8,7 +8,7 @@ modes:
   - id: signal_loss
     label: Signal loss or pairing
     description: The sensor and the phone, receiver or pump lose connection, or the sensor will not pair.
-    phrases: ["signal loss occurred", "pairing issue occurred", "complaint states signal loss", "failed to pair", "fail to pair", "signal failures"]
+    phrases: ["signal loss occurred", "pairing issue occurred", "pairing failure occurred", "complaint states signal loss", "failed to pair", "fail to pair", "signal failures"]
   - id: alert_failure
     label: Alert not received
     description: A low, high or system alert did not sound, was not seen, or alert settings did not behave as expected (app or receiver).
@@ -35,7 +35,7 @@ modes:
   - id: adhesion
     label: Adhesion
     description: The sensor or patch comes loose, lifts or falls off.
-    phrases: ["fell off", "falls off", "fall off", "came off", "began lifting"]
+    phrases: ["fell off", "falls off", "fall off", "came off", "began lifting", "poor patch adhesion occurred"]
   - id: receiver_hardware
     label: Receiver hardware
     description: The Dexcom receiver shuts down, restarts, or its display fails.
@@ -51,6 +51,7 @@ detection:
   min_ratio: 1.5            # observed must be at least 1.5x expected
   max_p_value: 0.001        # one-sided Poisson tail
   min_completeness: 0.5     # skip a month until at least half its usual reports have arrived
+  backtest_window_months: 3 # a flag counts for an event only if it is on an event month this close to the cutoff
 
 # Public FDA actions on this product. The backtest asks: using only reports FDA had received
 # by each date, when would the detector first have flagged the related mode?
@@ -79,3 +80,14 @@ events:
     title: iOS app correction for delayed glucose values and alerts (Z-2163-2026)
     detail: A software defect could delay glucose values and alerts while the app ran in the background. Firm initiated April 14, 2026.
     source: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=219288
+
+# Phrases added after a person reviewed what the Claude pass found in reports the rules could not place.
+phrase_log:
+  - date: "2026-11-23"
+    mode: signal_loss
+    phrase: pairing failure occurred
+    note: New allegation wording, first common in February 2026 events (166 reports in March 2026 alone). Claude placed 10 of the 41 unplaced reports in an August 2026 sample under signal loss, five of them with this wording.
+  - date: "2026-11-23"
+    mode: adhesion
+    phrase: poor patch adhesion occurred
+    note: New allegation wording since March 2026, 14 to 26 reports a month.

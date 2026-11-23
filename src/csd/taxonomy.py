@@ -54,6 +54,7 @@ class Product:
     modes: list[Mode]
     events: list[dict]
     detection: dict
+    phrase_log: list[dict] = field(default_factory=list)
 
     @property
     def mode_ids(self) -> list[str]:
@@ -79,4 +80,5 @@ def load_product(path: str | Path) -> Product:
         modes=modes,
         events=cfg.get("events", []),
         detection=cfg.get("detection", {}),
+        phrase_log=cfg.get("phrase_log", []),
     )

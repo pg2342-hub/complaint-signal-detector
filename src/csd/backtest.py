@@ -1,7 +1,9 @@
 """Replay the detector on what FDA had received by each date before a public event.
 
 For each event and each weekly cutoff, run the detector on the counts known at that cutoff and record
-whether the event's mode was flagged for any month in the six months before the cutoff.
+whether the event's mode was flagged for any event month in the window before the cutoff (three months by
+default). The window is short on purpose: a spike from an earlier, already-handled issue should not be credited
+to a later event.
 """
 
 from __future__ import annotations
@@ -20,11 +22,12 @@ def months_before(day: str, n: int) -> str:
 
 
 def run_event(event: dict, config: dict | None = None) -> dict:
+    window = (config or {}).get("backtest_window_months", 3)
     timeline = []
     first = None
     for point in event["points"]:
         signals = scan({event["mode"]: point["mode"]}, point["with_narrative"], config)
-        recent = [s for s in signals if s.month >= months_before(point["as_of"], 6)]
+        recent = [s for s in signals if s.month >= months_before(point["as_of"], window)]
         hit = [s for s in recent if s.flagged]
         best = max(recent, key=lambda s: s.ratio if s.completeness >= 0.5 else 0, default=None)
         row = {

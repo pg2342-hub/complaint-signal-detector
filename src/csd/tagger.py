@@ -9,8 +9,8 @@ Guardrails on every LLM answer:
 1. the mode must be one of the product's modes (or "other")
 2. the evidence quote must appear in the narrative, word for word
 3. confidence below the threshold goes to a person ("needs_review")
-4. when the narrative carries the manufacturer's own allegation template and the rules found it,
-   the rules label wins and the disagreement is logged (the template is the reporter's allegation)
+4. when the manufacturer's allegation sentence ("IT WAS REPORTED THAT ... OCCURRED") names a known mode,
+   that mode wins and the disagreement is logged (the template is the reporter's allegation)
 """
 
 from __future__ import annotations
@@ -49,6 +49,15 @@ class Tag:
 
 def has_template(text: str) -> bool:
     return bool(TEMPLATE.search(text))
+
+
+def allegation(text: str) -> str:
+    """The manufacturer's allegation sentence ("IT WAS REPORTED THAT ... OCCURRED."), or "" if there is none."""
+    m = TEMPLATE.search(text)
+    if not m:
+        return ""
+    end = text.find(".", m.end())
+    return text[m.start() : end if end != -1 else len(text)]
 
 
 def rules_tag(product: Product, text: str) -> Tag:
@@ -169,7 +178,9 @@ def guard(product: Product, text: str, llm: Tag, min_confidence: float = 0.6) ->
     """Apply the guardrails to an LLM tag and return the final (hybrid) tag."""
     allowed = set(product.mode_ids) | {OTHER}
     out = Tag(llm.mode, "hybrid", llm.evidence, llm.confidence, list(llm.notes), llm.cost_usd, llm.latency_s)
-    rules = rules_tag(product, text)
+    # Guardrail 4 reads only the allegation sentence: a phrase elsewhere in the narrative (say "came off",
+    # in the story of a hospital visit) is not the reporter's allegation and must not override the model.
+    rules = rules_tag(product, allegation(text))
 
     if llm.mode == NEEDS_REVIEW:
         out.mode = NEEDS_REVIEW
@@ -180,7 +191,7 @@ def guard(product: Product, text: str, llm: Tag, min_confidence: float = 0.6) ->
     elif llm.confidence is None or llm.confidence < min_confidence:
         out.mode, out.notes = NEEDS_REVIEW, out.notes + [f"confidence {llm.confidence} below {min_confidence}"]
 
-    if has_template(text) and rules.mode != OTHER and out.mode != rules.mode:
+    if rules.mode != OTHER and out.mode != rules.mode:
         out.notes.append(f"template allegation says {rules.mode}; LLM said {llm.mode}")
         out.mode, out.evidence = rules.mode, rules.evidence
     return out

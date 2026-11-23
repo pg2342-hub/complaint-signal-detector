@@ -2,7 +2,7 @@
 
 rules_agent       the phrase rules alone
 llm_recorded      the Claude tagger's raw answers, recorded by `csd tag-eval` (data/llm_eval_tags.json)
-hybrid_recorded   the same answers after the guardrails
+hybrid_recorded   the same recorded answers, put through the current guardrails (no new model calls)
 llm_live / hybrid_live  call Claude now (needs ANTHROPIC_API_KEY); cost is recorded per case
 """
 
@@ -15,7 +15,7 @@ sys.path.insert(0, str(HERE.parent / "src"))
 
 from golive_gate import Response  # noqa: E402
 
-from csd.tagger import ClaudeTagger, guard, rules_tag  # noqa: E402
+from csd.tagger import ClaudeTagger, Tag, guard, rules_tag  # noqa: E402
 from csd.taxonomy import load_product  # noqa: E402
 
 PRODUCT = load_product(HERE.parent / "config" / "dexcom_g7.yml")
@@ -37,7 +37,16 @@ def _recorded(kind):
 
 
 llm_recorded = _recorded("llm")
-hybrid_recorded = _recorded("hybrid")
+
+
+def hybrid_recorded(case_input):
+    raw = json.loads(RECORDED.read_text())["tags"][case_input["report_number"]]["llm"]
+    llm = Tag(
+        raw["mode"], "llm", raw["evidence"], raw["confidence"], list(raw["notes"]), raw["cost_usd"], raw["latency_s"]
+    )
+    tag = guard(PRODUCT, case_input["narrative"], llm)
+    return Response(tag.as_dict(), cost_usd=tag.cost_usd)
+
 
 _tagger = None
 
