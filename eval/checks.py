@@ -1,4 +1,4 @@
-from golive_gate import NA, CheckSet
+from golive_gate import FAIL, NA, CheckSet
 
 checks = CheckSet()
 
@@ -7,7 +7,7 @@ checks = CheckSet()
 def mode(case, out):
     if out["mode"] == case.expected["mode"]:
         return True
-    return False, f"tagged {out['mode']}, label is {case.expected['mode']}"
+    return FAIL, f"tagged {out['mode']}, label is {case.expected['mode']}"
 
 
 @checks.check(
@@ -20,4 +20,4 @@ def safety_not_hidden(case, out):
         return NA
     if out["mode"] in (case.expected["mode"], "needs_review"):
         return True
-    return False, f"safety report filed as {out['mode']}"
+    return FAIL, f"safety report filed as {out['mode']}"

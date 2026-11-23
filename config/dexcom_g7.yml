@@ -61,6 +61,18 @@ events:
     title: Receiver speaker recall (Class I, Z-1944-2025)
     detail: Defective foam or an assembly error may stop the receiver speaker from sounding low and high alerts. Firm initiated May 12, 2025.
     source: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm?id=213508
+  - id: ios_app_stale_glucose_correction
+    date: "2025-05-05"
+    mode: app_software
+    title: iOS app 2.7.0 correction for stale glucose values (Class II, Z-1906-2025)
+    detail: A bug could leave the app showing an old glucose value without updating it, so alerts might not trigger. Firm initiated May 5, 2025.
+    source: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=213398
+  - id: app_sensor_failed_alert_correction
+    date: "2025-07-24"
+    mode: alert_failure
+    title: G7 app correction for a missing "Sensor Failed" alert (Class I, Z-2447-2025)
+    detail: When the transmitter reported a failure, the app ended the session without a "Sensor Failed" alert, so glucose readings stopped without warning. Firm initiated July 24, 2025.
+    source: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215006
   - id: ios_app_alert_delay_correction
     date: "2026-04-14"
     mode: alert_failure

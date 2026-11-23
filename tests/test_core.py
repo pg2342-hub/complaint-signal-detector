@@ -11,6 +11,8 @@ from csd.openfda import OpenFDA, narrative
 from csd.tagger import Tag, guard, parse_llm_answer, rules_tag
 from csd.taxonomy import NEEDS_REVIEW, OTHER, load_product
 
+ROOT = Path(__file__).resolve().parents[1]
+
 PRODUCT = load_product(Path(__file__).parents[1] / "config" / "dexcom_g7.yml")
 
 
@@ -174,3 +176,17 @@ def test_narrative_joins_description_only():
         ]
     }
     assert narrative(rec) == "SIGNAL LOSS"
+
+
+def test_eval_checks_return_valid_verdicts():
+    import importlib.util
+    from types import SimpleNamespace
+
+    spec = importlib.util.spec_from_file_location("evalchecks", ROOT / "eval" / "checks.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    case = SimpleNamespace(expected={"mode": "alert_failure", "safety": True})
+    got = {c.id: c.run(case, {"mode": "signal_loss"}).result for c in mod.checks}
+    assert got == {"mode": "fail", "safety_not_hidden": "fail"}
+    got = {c.id: c.run(case, {"mode": "needs_review"}).result for c in mod.checks}
+    assert got == {"mode": "fail", "safety_not_hidden": "pass"}
