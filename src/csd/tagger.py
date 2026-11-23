@@ -193,5 +193,14 @@ def guard(product: Product, text: str, llm: Tag, min_confidence: float = 0.6) ->
 
     if rules.mode != OTHER and out.mode != rules.mode:
         out.notes.append(f"template allegation says {rules.mode}; LLM said {llm.mode}")
-        out.mode, out.evidence = rules.mode, rules.evidence
+        if out.mode == NEEDS_REVIEW or _is_safety(product, llm.mode) and not _is_safety(product, rules.mode):
+            # never let the template auto-file a report a check already sent to a person,
+            # or move a safety answer into a non-safety mode: a person decides
+            out.mode = NEEDS_REVIEW
+        else:
+            out.mode, out.evidence = rules.mode, rules.evidence
     return out
+
+
+def _is_safety(product: Product, mode_id: str) -> bool:
+    return any(m.id == mode_id and m.safety for m in product.modes)

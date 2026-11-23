@@ -86,7 +86,7 @@ phrase_log:
   - date: "2026-11-23"
     mode: signal_loss
     phrase: pairing failure occurred
-    note: New allegation wording, first common in February 2026 events (166 reports in March 2026 alone). Claude placed 10 of the 41 unplaced reports in an August 2026 sample under signal loss, five of them with this wording.
+    note: New allegation wording, first common in February 2026 events (166 reports in March 2026 alone). In the run before this phrase was added, Claude placed 10 of the 41 unplaced reports in an August 2026 sample under signal loss, five of them with this wording.
   - date: "2026-11-23"
     mode: adhesion
     phrase: poor patch adhesion occurred

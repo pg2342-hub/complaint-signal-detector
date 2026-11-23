@@ -33,9 +33,16 @@ About 550,000 G7 reports with event dates from July 2024 to October 2026.
 | App correction, missing "Sensor Failed" alert (Class I) | July 24, 2025 | **Flagged 14 days before**: June 2025 alert complaints at 2.0x their baseline share |
 | iOS app correction, delayed values and alerts | April 14, 2026 | Not flagged (February 2026 reached 1.4x, under the 1.5x bar) |
 
-Public reports arrive late, so most misses are expected. The point of the backtest is the method: run the same replay on a
-manufacturer's own complaint feed, which sees the same complaints weeks earlier. A flag shows that a complaint type rose,
-not what caused it.
+Two misses showed no clear rise; before the April 2026 action the rise was real but stayed under the 1.5x bar. The one
+hit is fragile: June 2025 was only 54% filled in when it was flagged (the bar is 50%), the lead is measured against
+Dexcom's public start date (its own investigation likely began earlier), and the June rise came weeks after the May 2025
+receiver recall in the same mode. A flag shows that a complaint type rose, not what caused it. The point of the backtest
+is the method: run the same replay on a manufacturer's own complaint feed, which sees the same complaints weeks earlier.
+
+False alarms were not measured: the backtest scans only each action's own mode. On today's data the detector flags 12
+mode-months in about 22 months of scored data, and most match no public action. Precision is the first thing a pilot on
+real complaint data has to measure. At these volumes the Poisson p-value is almost always tiny, so the 1.5x ratio does
+most of the work; an overdispersion-aware test is a better next step.
 
 **Tagging eval: 76 hand-labeled reports** (51 with the manufacturer's template, 25 free text), Claude Haiku 5.5.
 
@@ -43,16 +50,18 @@ not what caused it.
 |---|---|---|---|---|---|
 | Rules alone | no-go | 72 | 1 (a false low reading that ended in a coma, filed as adhesion) | 0 | free |
 | Claude, raw answer | go | 76 | 0 | 0 | about $0.18 |
-| Claude with guardrails | go | 74 | 0 | 2 | about $0.18 |
+| Claude with guardrails | go | 73 | 0 | 3 | about $0.18 |
 
-The free-text cases were found by searching for known wording, so the rules do better here than they would on new
-wording. That is what the second Claude pass is for: it reads a sample of recent reports the rules cannot place. In
+Read these with care. The guardrails were fixed after an earlier run on this same set (see below), so the guardrail
+row is tuned on its own test set; a fresh held-out set is the next step. The free-text cases were found by searching for
+known wording, so the rules do better here than they would on new wording. That is what the second Claude pass is for: it reads a sample of recent reports the rules cannot place. In
 August 2026 it surfaced a new allegation wording, "pairing failure occurred", common since February 2026, which a person
 then added to the signal-loss phrases (see `phrase_log` in the config).
 
 Two fixes came out of the first runs and are in the history: the model's answer is now a structured JSON output with
 room to think (in the first run, 15 of 76 answers could not be parsed, most likely cut off by a 300-token limit), and the template guardrail now reads only the allegation
-sentence (it had let a "came off" later in a narrative override a correct "inaccurate readings" answer).
+sentence (it had let a "came off" later in a narrative override a correct "inaccurate readings" answer), and it can no
+longer auto-file a report another check sent to a person, or move a safety answer into a non-safety mode.
 
 ## The tagger and its guardrails
 

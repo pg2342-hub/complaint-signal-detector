@@ -202,3 +202,11 @@ def test_template_override_reads_only_the_allegation_sentence():
     text2 = "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. THE APP CRASHED."
     llm2 = Tag("app_software", "llm", evidence="THE APP CRASHED", confidence=0.9)
     assert guard(PRODUCT, text2, llm2).mode == "signal_loss"
+
+
+def test_template_never_auto_files_a_review_or_demotes_a_safety_answer():
+    text = "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. NO ALERT SOUNDED DURING A LOW."
+    low_conf = Tag("signal_loss", "llm", evidence="NO ALERT SOUNDED", confidence=0.3)
+    assert guard(PRODUCT, text, low_conf).mode == NEEDS_REVIEW
+    safety = Tag("alert_failure", "llm", evidence="NO ALERT SOUNDED", confidence=0.9)
+    assert guard(PRODUCT, text, safety).mode == NEEDS_REVIEW
