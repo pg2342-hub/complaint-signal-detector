@@ -1,0 +1,69 @@
+# One product, its failure modes, and the public events the backtest checks against.
+# Phrases are the allegation wording in manufacturer reports ("IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED")
+# plus the plain words consumers use in voluntary MedWatch reports.
+name: Dexcom G7 CGM
+search: 'device.brand_name:"dexcom g7"'
+
+modes:
+  - id: signal_loss
+    label: Signal loss or pairing
+    description: The sensor and the phone, receiver or pump lose connection, or the sensor will not pair.
+    phrases: ["signal loss occurred", "pairing issue occurred", "complaint states signal loss", "failed to pair", "fail to pair", "signal failures"]
+  - id: alert_failure
+    label: Alert not received
+    description: A low, high or system alert did not sound, was not seen, or alert settings did not behave as expected (app or receiver).
+    phrases: ["alert notification settings issue occurred", "alert notification settings occurred", "alert notification occurred", "no alert notification occurred", "did not alert", "no audible alert"]
+    safety: true
+  - id: inaccurate_readings
+    label: Inaccurate readings
+    description: Glucose readings that disagree with a meter or with symptoms, including false lows and false highs.
+    phrases: ["inaccuracy between the continuous glucose monitor", "cgm accuracy", "inaccurate readings", "wrong readings", "incorrect cgm"]
+    safety: true
+  - id: sensor_wire_or_needle
+    label: Sensor wire, needle or applicator
+    description: The sensor wire or needle is detached, broken or missing, or the applicator does not deploy.
+    phrases: ["sensor wire occurred", "needle or cannula occurred", "applicator deployment issue occurred", "wire needle cannula damaged or missing occurred", "sensor application failure", "do not always deploy", "injection spring"]
+  - id: early_sensor_failure
+    label: Sensor failed early
+    description: The sensor stops giving readings before the end of its wear period (early expiration, sensor error, no readings, sensor failed).
+    phrases: ["early sensor expiration occurred", "brief sensor issue occurred", "wearable failure occurred", "sensors fail early", "sensor failures", "g7 failed", "device has often failed"]
+  - id: skin_reaction
+    label: Skin reaction or infection
+    description: Redness, itching, inflammation, infection or other skin injury at the sensor site.
+    phrases: ["skin reaction"]
+    safety: true
+  - id: adhesion
+    label: Adhesion
+    description: The sensor or patch comes loose, lifts or falls off.
+    phrases: ["fell off", "falls off", "fall off", "came off", "began lifting"]
+  - id: receiver_hardware
+    label: Receiver hardware
+    description: The Dexcom receiver shuts down, restarts, or its display fails.
+    phrases: ["receiver shutdown occurred", "receiver reinitialization occurred", "display issue occurred", "error icon display occurred"]
+  - id: app_software
+    label: App or display software
+    description: The app crashes, freezes, uninstalls itself, shows stuck readings, or runs on an unsupported phone OS.
+    phrases: ["app crash occurred", "readings froze", "app uninstalled itself", "unsupported os", "reading is stuck"]
+
+detection:
+  baseline_months: 6        # trailing months the expected share is taken from
+  min_count: 30             # ignore small modes
+  min_ratio: 1.5            # observed must be at least 1.5x expected
+  max_p_value: 0.001        # one-sided Poisson tail
+  min_completeness: 0.5     # skip a month until at least half its usual reports have arrived
+
+# Public FDA actions on this product. The backtest asks: using only reports FDA had received
+# by each date, when would the detector first have flagged the related mode?
+events:
+  - id: receiver_speaker_recall
+    date: "2025-05-12"
+    mode: alert_failure
+    title: Receiver speaker recall (Class I, Z-1944-2025)
+    detail: Defective foam or an assembly error may stop the receiver speaker from sounding low and high alerts. Firm initiated May 12, 2025.
+    source: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm?id=213508
+  - id: ios_app_alert_delay_correction
+    date: "2026-04-14"
+    mode: alert_failure
+    title: iOS app correction for delayed glucose values and alerts (Z-2163-2026)
+    detail: A software defect could delay glucose values and alerts while the app ran in the background. Firm initiated April 14, 2026.
+    source: https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=219288

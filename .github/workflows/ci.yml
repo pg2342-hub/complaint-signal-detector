@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: ruff check . && ruff format --check .
+      - run: pytest -q
+
+  gate:
+    # Re-scores the committed snapshot on every push: no network, no API key needed.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Detector and backtest on the committed snapshot
+        if: hashFiles('data/series.json') != ''
+        run: csd detect && csd backtest
+      - name: Rules alone (reported for comparison, expected to miss free text)
+        if: hashFiles('eval/cases.json') != ''
+        run: golive run eval/golive.yml --agent agent:rules_agent --out reports/rules || true
+      - name: Recorded Claude run with guardrails must pass the gate
+        if: hashFiles('data/llm_eval_tags.json') != ''
+        run: golive run eval/golive.yml --agent agent:hybrid_recorded --out reports/hybrid
+      - name: Gate summary
+        if: always()
+        run: |
+          for r in rules hybrid; do
+            if [ -f reports/$r/report.md ]; then cat reports/$r/report.md >> "$GITHUB_STEP_SUMMARY"; fi
+          done

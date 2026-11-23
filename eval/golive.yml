@@ -1,0 +1,5 @@
+cases: cases.json
+checks: checks:checks
+agent: agent:hybrid_recorded
+gate: gate.yml
+runs: 1   # recorded answers do not change between runs

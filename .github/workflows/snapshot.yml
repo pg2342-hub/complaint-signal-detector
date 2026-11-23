@@ -1,0 +1,51 @@
+name: Snapshot
+
+# Pulls fresh data from openFDA, runs the Claude tagger (when the ANTHROPIC_API_KEY secret is set),
+# rebuilds the demo page, and commits the results. Run it by hand from the Actions tab.
+on:
+  workflow_dispatch:
+    inputs:
+      run_claude:
+        description: "Run the Claude tagger (uses the ANTHROPIC_API_KEY secret)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPENFDA_API_KEY: ${{ secrets.OPENFDA_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[claude]"
+      - name: Pull from openFDA
+        run: csd snapshot
+      - run: python eval/build_cases.py
+      - run: csd detect && csd backtest && csd examples
+      - name: Rules-only eval
+        run: golive run eval/golive.yml --agent agent:rules_agent --out reports/rules || true
+      - name: Claude tagger on the eval set, then on recent reports the rules cannot place
+        if: env.ANTHROPIC_API_KEY != '' && inputs.run_claude
+        run: |
+          csd tag-eval
+          csd unexplained
+          golive run eval/golive.yml --agent agent:llm_recorded --out reports/llm || true
+          golive run eval/golive.yml --agent agent:hybrid_recorded --out reports/hybrid || true
+      - name: Build the demo page
+        run: python scripts/build_demo.py
+      - name: Commit and publish
+        run: |
+          git config user.name "Pranav Gudise"
+          git config user.email "273664482+pg2342-hub@users.noreply.github.com"
+          git add data eval/cases.json docs reports
+          git commit -m "Snapshot $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push
+          git subtree split --prefix docs -b gh-pages
+          git push -f origin gh-pages

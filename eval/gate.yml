@@ -1,0 +1,9 @@
+gate:
+  name: Complaint tagger go-live gate
+  max_critical_failures: 0
+  rules:
+    - name: overall
+      min_pass_rate: 0.90      # 69 of 76
+    - name: free-text reports (no manufacturer template)
+      group: free_text
+      min_pass_rate: 0.80
