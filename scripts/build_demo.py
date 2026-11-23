@@ -219,7 +219,9 @@ Data from openFDA, last updated {e(series["openfda_last_updated"])}. <a href="{R
 <p class="muted">For each public FDA action, the detector is replayed weekly for the 12 weeks before it, on only the reports FDA had received by each date. A flag counts only if it is on one of the three event months before that date, so a spike from an earlier issue is not credited to a later one.</p>
 <div class="wrap"><table><tr><th>Date</th><th>FDA action</th><th>Mode</th><th>Result</th></tr>{bt_html}</table></div>
 <p>Public reports reach FDA up to 30 days after the manufacturer hears of an event, and recent months fill in slowly.
-A manufacturer's own complaint feed sees the same reports weeks earlier, which is where this detector belongs.</p>
+A manufacturer's own complaint feed sees the same reports weeks earlier, which is where this detector belongs.
+A flag shows that a complaint type rose, not what caused it, and lead time is measured against the public start date of each action.
+False alarms are not measured here: the replay scans only each action's own mode (see the flag history below).</p>
 {charts}
 <h3>Every month flagged on today's data</h3>
 <p class="muted">Unlike the backtest, this uses every report received since, so it shows what the detector sees in hindsight.
@@ -232,8 +234,9 @@ each labeled by hand with one failure mode, scored with <a href="https://github.
 Gate: at least 90% right overall and 80% on free-text reports, and no safety report (alerts, inaccurate readings, skin reactions)
 filed under another mode. {llm_note}</p>
 <p class="muted">Read the rules row with care: the free-text reports were found by searching for known complaint wording, so the rules
-do better here than on wording they have never seen (see below). The guardrails sent two answers the model had right to a person:
-that is the price of never filing a safety report under the wrong mode. The model's answers vary a little between runs
+do better here than on wording they have never seen (see below). The guardrails send some answers the model had right to a person:
+that is the price of never filing a safety report under the wrong mode. The guardrails were fixed after an earlier run on
+this same set, so treat the guardrail row as tuned, not held out. The model's answers vary a little between runs
 (75 and 76 of 76 raw across the runs so far), which is why CI re-scores the recorded answers on every change.</p>
 <div class="wrap"><table><tr><th>Tagger</th><th>Gate</th><th>Right</th><th>Free text</th><th>Safety misses</th><th>To a person</th><th>Cost</th><th>Latency</th><th></th></tr>
 {eval_rows()}</table></div>
