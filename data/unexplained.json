@@ -12,8 +12,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000169,
-    "latency_s": 1.128
+    "cost_usd": 0.000144,
+    "latency_s": 1.496
    },
    "hybrid": {
     "mode": "signal_loss",
@@ -21,8 +21,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000169,
-    "latency_s": 1.128
+    "cost_usd": 0.000144,
+    "latency_s": 1.496
    }
   },
   "3004753838-2026-216354": {
@@ -31,19 +31,19 @@
     "mode": "adhesion",
     "method": "llm",
     "evidence": "It was reported that poor patch adhesion occurred.",
-    "confidence": 0.9,
+    "confidence": 0.95,
     "notes": [],
-    "cost_usd": 0.000111,
-    "latency_s": 0.776
+    "cost_usd": 0.000145,
+    "latency_s": 1.365
    },
    "hybrid": {
     "mode": "adhesion",
     "method": "hybrid",
     "evidence": "It was reported that poor patch adhesion occurred.",
-    "confidence": 0.9,
+    "confidence": 0.95,
     "notes": [],
-    "cost_usd": 0.000111,
-    "latency_s": 0.776
+    "cost_usd": 0.000145,
+    "latency_s": 1.365
    }
   },
   "3004753838-2026-216421": {
@@ -54,8 +54,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000179,
-    "latency_s": 1.255
+    "cost_usd": 0.000144,
+    "latency_s": 1.089
    },
    "hybrid": {
     "mode": "signal_loss",
@@ -63,8 +63,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000179,
-    "latency_s": 1.255
+    "cost_usd": 0.000144,
+    "latency_s": 1.089
    }
   },
   "3004753838-2026-217279": {
@@ -73,19 +73,19 @@
     "mode": "signal_loss",
     "method": "llm",
     "evidence": "It was reported that pairing failure occurred.",
-    "confidence": 0.85,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000168,
-    "latency_s": 1.118
+    "cost_usd": 0.000144,
+    "latency_s": 1.646
    },
    "hybrid": {
     "mode": "signal_loss",
     "method": "hybrid",
     "evidence": "It was reported that pairing failure occurred.",
-    "confidence": 0.85,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000168,
-    "latency_s": 1.118
+    "cost_usd": 0.000144,
+    "latency_s": 1.646
    }
   },
   "MW6000501": {
@@ -96,8 +96,8 @@
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
     "confidence": 0.85,
     "notes": [],
-    "cost_usd": 0.000254,
-    "latency_s": 1.477
+    "cost_usd": 0.000274,
+    "latency_s": 1.88
    },
    "hybrid": {
     "mode": "early_sensor_failure",
@@ -105,58 +105,50 @@
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
     "confidence": 0.85,
     "notes": [],
-    "cost_usd": 0.000254,
-    "latency_s": 1.477
+    "cost_usd": 0.000274,
+    "latency_s": 1.88
    }
   },
   "MW6000502": {
    "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number:1725306003, Serial Number: (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and repla",
    "llm": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000273,
-    "latency_s": 1.686
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000187,
+    "latency_s": 1.422
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000273,
-    "latency_s": 1.686
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000187,
+    "latency_s": 1.422
    }
   },
   "MW6000517": {
    "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail:5 in total. I have called Dexcom to report the multiple issues with this lot of sensors,and they are unwilling to take the remaining sensor back because it's \"not policy\" to takeback a sensor from a lot that keeps failing from one customer, and ",
    "llm": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000274,
-    "latency_s": 1.571
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000275,
+    "latency_s": 1.676
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000274,
-    "latency_s": 1.571
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000275,
+    "latency_s": 1.676
    }
   },
   "MW6000518": {
@@ -167,8 +159,8 @@
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
     "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000268,
-    "latency_s": 1.546
+    "cost_usd": 0.000188,
+    "latency_s": 1.186
    },
    "hybrid": {
     "mode": "early_sensor_failure",
@@ -176,33 +168,29 @@
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
     "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000268,
-    "latency_s": 1.546
+    "cost_usd": 0.000188,
+    "latency_s": 1.186
    }
   },
   "MW6000519": {
    "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. I have had multiple sensors from this lot fail: 5 in total. I have called Dexcom to report the multiple issues with this lot of sensors and they are unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensors from a lot that keep failing from one customer, and replace that whole lotof sensors the customer",
    "llm": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000269,
-    "latency_s": 1.87
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000183,
+    "latency_s": 1.065
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000269,
-    "latency_s": 1.87
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000183,
+    "latency_s": 1.065
    }
   },
   "MW6000520": {
@@ -211,19 +199,19 @@
     "mode": "early_sensor_failure",
     "method": "llm",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.75,
     "notes": [],
-    "cost_usd": 0.000268,
-    "latency_s": 1.52
+    "cost_usd": 0.000187,
+    "latency_s": 1.133
    },
    "hybrid": {
     "mode": "early_sensor_failure",
     "method": "hybrid",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.75,
     "notes": [],
-    "cost_usd": 0.000268,
-    "latency_s": 1.52
+    "cost_usd": 0.000187,
+    "latency_s": 1.133
    }
   },
   "MW6000521": {
@@ -232,69 +220,61 @@
     "mode": "early_sensor_failure",
     "method": "llm",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000272,
-    "latency_s": 1.536
+    "cost_usd": 0.000187,
+    "latency_s": 2.124
    },
    "hybrid": {
     "mode": "early_sensor_failure",
     "method": "hybrid",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000272,
-    "latency_s": 1.536
+    "cost_usd": 0.000187,
+    "latency_s": 2.124
    }
   },
   "MW6000522": {
    "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
    "llm": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000273,
-    "latency_s": 1.56
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000188,
+    "latency_s": 1.321
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000273,
-    "latency_s": 1.56
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000188,
+    "latency_s": 1.321
    }
   },
   "MW6000523": {
    "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called Dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
    "llm": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000273,
-    "latency_s": 1.623
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000188,
+    "latency_s": 1.093
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "early_sensor_failure",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000273,
-    "latency_s": 1.623
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000188,
+    "latency_s": 1.093
    }
   },
   "MW6000524": {
@@ -303,19 +283,19 @@
     "mode": "early_sensor_failure",
     "method": "llm",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000264,
-    "latency_s": 1.469
+    "cost_usd": 0.000188,
+    "latency_s": 1.817
    },
    "hybrid": {
     "mode": "early_sensor_failure",
     "method": "hybrid",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000264,
-    "latency_s": 1.469
+    "cost_usd": 0.000188,
+    "latency_s": 1.817
    }
   },
   "MW6000525": {
@@ -324,19 +304,19 @@
     "mode": "early_sensor_failure",
     "method": "llm",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000271,
-    "latency_s": 1.715
+    "cost_usd": 0.000276,
+    "latency_s": 1.632
    },
    "hybrid": {
     "mode": "early_sensor_failure",
     "method": "hybrid",
     "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000271,
-    "latency_s": 1.715
+    "cost_usd": 0.000276,
+    "latency_s": 1.632
    }
   },
   "3004753838-2026-218931": {
@@ -344,20 +324,20 @@
    "llm": {
     "mode": "other",
     "method": "llm",
-    "evidence": "it was determined this complaint is Not Reportable",
+    "evidence": "it was determined this complaint is Not Reportable per (b)(4)",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 9.4e-05,
-    "latency_s": 0.678
+    "cost_usd": 0.000132,
+    "latency_s": 1.052
    },
    "hybrid": {
     "mode": "other",
     "method": "hybrid",
-    "evidence": "it was determined this complaint is Not Reportable",
+    "evidence": "it was determined this complaint is Not Reportable per (b)(4)",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 9.4e-05,
-    "latency_s": 0.678
+    "cost_usd": 0.000132,
+    "latency_s": 1.052
    }
   },
   "3004753838-2026-219129": {
@@ -368,8 +348,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.00017,
-    "latency_s": 1.228
+    "cost_usd": 0.000144,
+    "latency_s": 1.447
    },
    "hybrid": {
     "mode": "signal_loss",
@@ -377,83 +357,71 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.00017,
-    "latency_s": 1.228
+    "cost_usd": 0.000144,
+    "latency_s": 1.447
    }
   },
   "MW6000646": {
    "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 mos. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the se",
    "llm": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000246,
-    "latency_s": 1.792
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000154,
+    "latency_s": 1.084
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000246,
-    "latency_s": 1.792
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000154,
+    "latency_s": 1.084
    }
   },
   "MW6000643": {
    "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 mos. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the se",
    "llm": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000246,
-    "latency_s": 1.625
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000154,
+    "latency_s": 1.225
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000246,
-    "latency_s": 1.625
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000154,
+    "latency_s": 1.225
    }
   },
   "MW6000644": {
    "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 mos. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the se",
    "llm": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000246,
-    "latency_s": 1.673
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000154,
+    "latency_s": 1.338
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000246,
-    "latency_s": 1.673
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000154,
+    "latency_s": 1.338
    }
   },
   "MW6000655": {
@@ -462,44 +430,42 @@
     "mode": "signal_loss",
     "method": "llm",
     "evidence": "some of the sensors have lost connectionintermittently",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000245,
-    "latency_s": 1.727
+    "cost_usd": 0.000154,
+    "latency_s": 1.444
    },
    "hybrid": {
     "mode": "signal_loss",
     "method": "hybrid",
     "evidence": "some of the sensors have lost connectionintermittently",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000245,
-    "latency_s": 1.727
+    "cost_usd": 0.000154,
+    "latency_s": 1.444
    }
   },
   "3004753838-2026-220787": {
    "narrative": "It was reported that an unspecified error message occurred. Data was provided for investigation. Confirmation of the complaint was confirmed via data. However, signal loss over an hour was found in connection to the allegation. The probable cause was the transmitter and app were unable to establish a connection. No injury or medical intervention was reported.",
    "llm": {
-    "mode": "needs_review",
+    "mode": "other",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000228,
-    "latency_s": 1.93
+    "evidence": "It was reported that an unspecified error message occurred.",
+    "confidence": 0.45,
+    "notes": [],
+    "cost_usd": 0.000276,
+    "latency_s": 2.561
    },
    "hybrid": {
     "mode": "needs_review",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
+    "evidence": "It was reported that an unspecified error message occurred.",
+    "confidence": 0.45,
     "notes": [
-     "answer was not JSON"
+     "confidence 0.45 below 0.6"
     ],
-    "cost_usd": 0.000228,
-    "latency_s": 1.93
+    "cost_usd": 0.000276,
+    "latency_s": 2.561
    }
   },
   "3004753838-2026-221400": {
@@ -510,8 +476,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000167,
-    "latency_s": 1.073
+    "cost_usd": 0.000142,
+    "latency_s": 1.805
    },
    "hybrid": {
     "mode": "other",
@@ -519,8 +485,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000167,
-    "latency_s": 1.073
+    "cost_usd": 0.000142,
+    "latency_s": 1.805
    }
   },
   "3004753838-2026-221389": {
@@ -529,19 +495,19 @@
     "mode": "other",
     "method": "llm",
     "evidence": "It was reported that labeling issue was reported.",
-    "confidence": 0.95,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000176,
-    "latency_s": 1.225
+    "cost_usd": 0.000142,
+    "latency_s": 1.265
    },
    "hybrid": {
     "mode": "other",
     "method": "hybrid",
     "evidence": "It was reported that labeling issue was reported.",
-    "confidence": 0.95,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000176,
-    "latency_s": 1.225
+    "cost_usd": 0.000142,
+    "latency_s": 1.265
    }
   },
   "3004753838-2026-221448": {
@@ -552,8 +518,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.00015,
-    "latency_s": 0.922
+    "cost_usd": 0.000141,
+    "latency_s": 0.906
    },
    "hybrid": {
     "mode": "other",
@@ -561,8 +527,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.00015,
-    "latency_s": 0.922
+    "cost_usd": 0.000141,
+    "latency_s": 0.906
    }
   },
   "3004753838-2026-221609": {
@@ -571,19 +537,19 @@
     "mode": "other",
     "method": "llm",
     "evidence": "It was reported that labeling issue was reported.",
-    "confidence": 0.9,
+    "confidence": 0.85,
     "notes": [],
-    "cost_usd": 0.000144,
-    "latency_s": 0.994
+    "cost_usd": 0.00014,
+    "latency_s": 0.973
    },
    "hybrid": {
     "mode": "other",
     "method": "hybrid",
     "evidence": "It was reported that labeling issue was reported.",
-    "confidence": 0.9,
+    "confidence": 0.85,
     "notes": [],
-    "cost_usd": 0.000144,
-    "latency_s": 0.994
+    "cost_usd": 0.00014,
+    "latency_s": 0.973
    }
   },
   "3004753838-2026-222474": {
@@ -594,8 +560,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000158,
-    "latency_s": 1.307
+    "cost_usd": 0.000142,
+    "latency_s": 1.114
    },
    "hybrid": {
     "mode": "other",
@@ -603,8 +569,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000158,
-    "latency_s": 1.307
+    "cost_usd": 0.000142,
+    "latency_s": 1.114
    }
   },
   "3004753838-2026-222458": {
@@ -615,8 +581,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000178,
-    "latency_s": 1.308
+    "cost_usd": 0.000142,
+    "latency_s": 1.174
    },
    "hybrid": {
     "mode": "other",
@@ -624,8 +590,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000178,
-    "latency_s": 1.308
+    "cost_usd": 0.000142,
+    "latency_s": 1.174
    }
   },
   "3004753838-2026-222464": {
@@ -636,8 +602,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000161,
-    "latency_s": 1.535
+    "cost_usd": 0.000141,
+    "latency_s": 1.114
    },
    "hybrid": {
     "mode": "other",
@@ -645,8 +611,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000161,
-    "latency_s": 1.535
+    "cost_usd": 0.000141,
+    "latency_s": 1.114
    }
   },
   "3004753838-2026-222537": {
@@ -657,8 +623,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000142,
-    "latency_s": 1.014
+    "cost_usd": 0.000141,
+    "latency_s": 1.134
    },
    "hybrid": {
     "mode": "other",
@@ -666,8 +632,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000142,
-    "latency_s": 1.014
+    "cost_usd": 0.000141,
+    "latency_s": 1.134
    }
   },
   "3004753838-2026-222528": {
@@ -676,19 +642,19 @@
     "mode": "other",
     "method": "llm",
     "evidence": "It was reported that labeling issue was reported.",
-    "confidence": 0.95,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000156,
-    "latency_s": 1.11
+    "cost_usd": 0.000142,
+    "latency_s": 2.102
    },
    "hybrid": {
     "mode": "other",
     "method": "hybrid",
     "evidence": "It was reported that labeling issue was reported.",
-    "confidence": 0.95,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000156,
-    "latency_s": 1.11
+    "cost_usd": 0.000142,
+    "latency_s": 2.102
    }
   },
   "3004753838-2026-222571": {
@@ -697,19 +663,19 @@
     "mode": "adhesion",
     "method": "llm",
     "evidence": "It was reported that poor patch adhesion occurred.",
-    "confidence": 0.9,
+    "confidence": 0.95,
     "notes": [],
-    "cost_usd": 0.000111,
-    "latency_s": 0.769
+    "cost_usd": 0.000145,
+    "latency_s": 0.954
    },
    "hybrid": {
     "mode": "adhesion",
     "method": "hybrid",
     "evidence": "It was reported that poor patch adhesion occurred.",
-    "confidence": 0.9,
+    "confidence": 0.95,
     "notes": [],
-    "cost_usd": 0.000111,
-    "latency_s": 0.769
+    "cost_usd": 0.000145,
+    "latency_s": 0.954
    }
   },
   "3004753838-2026-222701": {
@@ -718,19 +684,19 @@
     "mode": "receiver_hardware",
     "method": "llm",
     "evidence": "Receiver won\u00bft turn on",
-    "confidence": 0.85,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000178,
-    "latency_s": 1.282
+    "cost_usd": 0.000141,
+    "latency_s": 1.116
    },
    "hybrid": {
     "mode": "receiver_hardware",
     "method": "hybrid",
     "evidence": "Receiver won\u00bft turn on",
-    "confidence": 0.85,
+    "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000178,
-    "latency_s": 1.282
+    "cost_usd": 0.000141,
+    "latency_s": 1.116
    }
   },
   "MW6000903": {
@@ -739,44 +705,40 @@
     "mode": "early_sensor_failure",
     "method": "llm",
     "evidence": "sensors repeatedly go out while sleeping",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000199,
-    "latency_s": 1.214
+    "cost_usd": 0.000146,
+    "latency_s": 1.172
    },
    "hybrid": {
     "mode": "early_sensor_failure",
     "method": "hybrid",
     "evidence": "sensors repeatedly go out while sleeping",
-    "confidence": 0.85,
+    "confidence": 0.8,
     "notes": [],
-    "cost_usd": 0.000199,
-    "latency_s": 1.214
+    "cost_usd": 0.000146,
+    "latency_s": 1.172
    }
   },
   "3004753838-2026-223690": {
    "narrative": "It was reported that a Bluetooth is off warning message occurred. Data Analysis will not confirm the alleged complaint or determine a root cause. The probable cause could not be determined. No injury or medical intervention was reported.",
    "llm": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "llm",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000225,
-    "latency_s": 2.011
+    "evidence": "It was reported that a Bluetooth is off warning message occurred.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000136,
+    "latency_s": 1.393
    },
    "hybrid": {
-    "mode": "needs_review",
+    "mode": "signal_loss",
     "method": "hybrid",
-    "evidence": "",
-    "confidence": null,
-    "notes": [
-     "answer was not JSON"
-    ],
-    "cost_usd": 0.000225,
-    "latency_s": 2.011
+    "evidence": "It was reported that a Bluetooth is off warning message occurred.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000136,
+    "latency_s": 1.393
    }
   },
   "MW6000964": {
@@ -784,20 +746,22 @@
    "llm": {
     "mode": "inaccurate_readings",
     "method": "llm",
-    "evidence": "the Dexcom G7 was reading a blood sugar of 181mg/dl, when in fact theblood sugar was 500",
-    "confidence": 0.97,
+    "evidence": "the Dexcom G7 was reading a blood sugar of 181mg/dl, when in fact the blood sugar was 500!",
+    "confidence": 0.95,
     "notes": [],
-    "cost_usd": 0.000139,
-    "latency_s": 0.799
+    "cost_usd": 0.000174,
+    "latency_s": 1.242
    },
    "hybrid": {
-    "mode": "inaccurate_readings",
+    "mode": "needs_review",
     "method": "hybrid",
-    "evidence": "the Dexcom G7 was reading a blood sugar of 181mg/dl, when in fact theblood sugar was 500",
-    "confidence": 0.97,
-    "notes": [],
-    "cost_usd": 0.000139,
-    "latency_s": 0.799
+    "evidence": "the Dexcom G7 was reading a blood sugar of 181mg/dl, when in fact the blood sugar was 500!",
+    "confidence": 0.95,
+    "notes": [
+     "evidence quote not found in narrative"
+    ],
+    "cost_usd": 0.000174,
+    "latency_s": 1.242
    }
   },
   "3004753838-2026-223966": {
@@ -808,8 +772,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000162,
-    "latency_s": 1.029
+    "cost_usd": 0.000142,
+    "latency_s": 1.051
    },
    "hybrid": {
     "mode": "other",
@@ -817,8 +781,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000162,
-    "latency_s": 1.029
+    "cost_usd": 0.000142,
+    "latency_s": 1.051
    }
   },
   "3004753838-2026-224115": {
@@ -829,8 +793,8 @@
     "evidence": "It was reported that sensor didn't work occurred.",
     "confidence": 0.6,
     "notes": [],
-    "cost_usd": 0.000206,
-    "latency_s": 1.332
+    "cost_usd": 0.000147,
+    "latency_s": 1.027
    },
    "hybrid": {
     "mode": "early_sensor_failure",
@@ -838,8 +802,8 @@
     "evidence": "It was reported that sensor didn't work occurred.",
     "confidence": 0.6,
     "notes": [],
-    "cost_usd": 0.000206,
-    "latency_s": 1.332
+    "cost_usd": 0.000147,
+    "latency_s": 1.027
    }
   },
   "3004753838-2026-224353": {
@@ -850,8 +814,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000181,
-    "latency_s": 1.306
+    "cost_usd": 0.000144,
+    "latency_s": 1.295
    },
    "hybrid": {
     "mode": "signal_loss",
@@ -859,8 +823,8 @@
     "evidence": "It was reported that pairing failure occurred.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000181,
-    "latency_s": 1.306
+    "cost_usd": 0.000144,
+    "latency_s": 1.295
    }
   },
   "3004753838-2026-224986": {
@@ -871,8 +835,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000151,
-    "latency_s": 1.012
+    "cost_usd": 0.000142,
+    "latency_s": 1.107
    },
    "hybrid": {
     "mode": "other",
@@ -880,8 +844,8 @@
     "evidence": "It was reported that labeling issue was reported.",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000151,
-    "latency_s": 1.012
+    "cost_usd": 0.000142,
+    "latency_s": 1.107
    }
   },
   "3004753838-2026-225549": {
@@ -889,20 +853,20 @@
    "llm": {
     "mode": "sensor_wire_or_needle",
     "method": "llm",
-    "evidence": "Wire/Needle/Cannula Damage or Missing",
+    "evidence": "\"Wire/Needle/Cannula Damage or Missing\" occurred",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000173,
-    "latency_s": 1.176
+    "cost_usd": 0.000143,
+    "latency_s": 1.328
    },
    "hybrid": {
     "mode": "sensor_wire_or_needle",
     "method": "hybrid",
-    "evidence": "Wire/Needle/Cannula Damage or Missing",
+    "evidence": "\"Wire/Needle/Cannula Damage or Missing\" occurred",
     "confidence": 0.9,
     "notes": [],
-    "cost_usd": 0.000173,
-    "latency_s": 1.176
+    "cost_usd": 0.000143,
+    "latency_s": 1.328
    }
   }
  }
