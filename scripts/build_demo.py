@@ -130,7 +130,7 @@ def main() -> None:
         sig_html = "<p>No mode is above its baseline in the last six months of complete data.</p>"
 
     bt_html = ""
-    for r in backtest:
+    for r in sorted(backtest, key=lambda r: r["date"]):
         if r["caught_before_event"]:
             res = f"<b>Flagged {r['lead_days']} days before</b> (as of {fmt_date(r['first_flag_as_of'])})"
             fm = r["timeline"][[t["as_of"] for t in r["timeline"]].index(r["first_flag_as_of"])]["flagged_months"][0]
@@ -152,6 +152,11 @@ def main() -> None:
             f"<span class='muted'>{e(r['detail'])}</span></td><td>{e(LABEL[r['mode']])}</td><td>{res}</td></tr>"
         )
 
+    hist_rows = "".join(
+        f"<tr><td>{e(month_name(p['month']))}</td><td>{e(LABEL[p['mode']])}</td><td>{p['observed']:,}</td>"
+        f"<td>{p['expected']:,.0f}</td><td>{p['ratio']:.1f}x</td></tr>"
+        for p in sorted(signals["flagged"], key=lambda p: p["month"])
+    )
     flagged_modes = {p["mode"] for p in recent} | {r["mode"] for r in backtest}
     charts = "".join(
         f"<div class='chart'><h4>{e(LABEL[m])}: share of reports by event month</h4>"
@@ -202,7 +207,7 @@ table{{border-collapse:collapse;width:100%;font-size:14px}} td,th{{border-bottom
 <p class="muted">Public FDA adverse event reports for the {e(PRODUCT.name)}, scanned for failure modes that are rising.
 Data from openFDA, last updated {e(series["openfda_last_updated"])}. <a href="{REPO}">Code on GitHub</a>.</p>
 
-<div class="kpi"><div><b>{sum(totals.values()):,}</b>reports, events {e(month_name(sorted(totals)[0]))} to {e(month_name(latest))}</div>
+<div class="kpi"><div><b>{sum(series.get("all_reports", totals).values()):,}</b>reports, events {e(month_name(sorted(totals)[0]))} to {e(month_name(latest))}</div>
 <div><b>{len(PRODUCT.modes)}</b>failure modes tracked</div>
 <div><b>{sum(1 for r in backtest if r["caught_before_event"])} of {len(backtest)}</b>public FDA actions flagged beforehand</div></div>
 
@@ -216,12 +221,20 @@ Data from openFDA, last updated {e(series["openfda_last_updated"])}. <a href="{R
 <p>Public reports reach FDA up to 30 days after the manufacturer hears of an event, and recent months fill in slowly.
 A manufacturer's own complaint feed sees the same reports weeks earlier, which is where this detector belongs.</p>
 {charts}
+<h3>Every month flagged on today's data</h3>
+<p class="muted">Unlike the backtest, this uses every report received since, so it shows what the detector sees in hindsight.
+The inserter and applicator rise in early 2025 matches what Dexcom described on its October 2025 earnings call.</p>
+<div class="wrap"><table><tr><th>Event month</th><th>Mode</th><th>Reports</th><th>Expected</th><th>Ratio</th></tr>{hist_rows}</table></div>
 
 <h2>Tagging eval</h2>
 <p class="muted">{len(json.loads((ROOT / "eval" / "cases.json").read_text())["cases"]) if (ROOT / "eval" / "cases.json").exists() else 0} real reports,
 each labeled by hand with one failure mode, scored with <a href="https://github.com/pg2342-hub/golive-gate">golive-gate</a>.
 Gate: at least 90% right overall and 80% on free-text reports, and no safety report (alerts, inaccurate readings, skin reactions)
 filed under another mode. {llm_note}</p>
+<p class="muted">Read the rules row with care: the free-text reports were found by searching for known complaint wording, so the rules
+do better here than on wording they have never seen (see below). The guardrails sent two answers the model had right to a person:
+that is the price of never filing a safety report under the wrong mode. The model's answers vary a little between runs
+(75 and 76 of 76 raw across the runs so far), which is why CI re-scores the recorded answers on every change.</p>
 <div class="wrap"><table><tr><th>Tagger</th><th>Gate</th><th>Right</th><th>Free text</th><th>Safety misses</th><th>To a person</th><th>Cost</th><th>Latency</th><th></th></tr>
 {eval_rows()}</table></div>
 {unexp}
@@ -230,7 +243,7 @@ filed under another mode. {llm_note}</p>
 <ol>
 <li><b>Count.</b> Each failure mode is a list of phrases (the manufacturer's allegation wording and consumers' own words). openFDA counts every matching report by event month, server-side.</li>
 <li><b>Detect.</b> A mode is flagged when its share of reports is at least 1.5x its previous six months, with at least 30 reports and a Poisson p below 0.001. Months wait until half their usual reports have arrived.</li>
-<li><b>Tag.</b> Claude reads narratives the phrases cannot place and picks a mode with a quote as evidence. Guardrails: the mode must exist, the quote must be in the text, low confidence goes to a person, and the manufacturer's own allegation wins over the model.</li>
+<li><b>Tag.</b> Claude reads narratives the phrases cannot place and picks a mode with a quote as evidence. Guardrails: the mode must exist, the quote must be in the text, low confidence goes to a person, and when the manufacturer's allegation sentence names a known mode, that mode wins.</li>
 <li><b>Gate.</b> The tagger only ships if it passes the eval gate in CI.</li>
 </ol>
 <p class="muted">Limits: openFDA narratives are blank for many of the latest reports, which can hide a rise but not create one. Report counts are not failure rates. This page reads public data only and says nothing about causes.</p>
