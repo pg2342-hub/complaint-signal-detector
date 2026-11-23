@@ -103,6 +103,19 @@ class ClaudeTagger:
         self.model = model
         self.product = product
 
+    def schema(self) -> dict:
+        """Structured output: the API guarantees the answer parses and the mode is a known id."""
+        return {
+            "type": "object",
+            "properties": {
+                "mode": {"type": "string", "enum": [*self.product.mode_ids, OTHER]},
+                "confidence": {"type": "number"},
+                "evidence": {"type": "string"},
+            },
+            "required": ["mode", "confidence", "evidence"],
+            "additionalProperties": False,
+        }
+
     def prompt(self, text: str) -> str:
         modes = "\n".join(f"- {m.id}: {m.description}" for m in self.product.modes)
         return PROMPT.format(product=self.product.name, modes=modes, text=text)
@@ -111,14 +124,19 @@ class ClaudeTagger:
         start = time.perf_counter()
         response = self.client.messages.create(
             model=self.model,
-            max_tokens=300,
+            # room for the model's thinking plus the short JSON answer; 300 was cut off mid-thought
+            max_tokens=2000,
             messages=[{"role": "user", "content": self.prompt(text)}],
+            output_config={"effort": "low", "format": {"type": "json_schema", "schema": self.schema()}},
         )
         latency = time.perf_counter() - start
         price = PRICES.get(getattr(response, "model", self.model)) or PRICES.get(self.model, (0, 0))
         cost = (response.usage.input_tokens * price[0] + response.usage.output_tokens * price[1]) / 1e6
-        raw = "".join(getattr(b, "text", "") for b in response.content)
+        raw = "".join(getattr(b, "text", "") for b in response.content if getattr(b, "type", "text") == "text")
         tag = parse_llm_answer(raw)
+        stop = getattr(response, "stop_reason", None)
+        if tag.mode == NEEDS_REVIEW and stop not in (None, "end_turn"):
+            tag.notes.append(f"stop_reason {stop}")
         tag.cost_usd, tag.latency_s = cost, latency
         return tag
 
