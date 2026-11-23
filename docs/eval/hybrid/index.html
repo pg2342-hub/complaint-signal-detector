@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Complaint tagger go-live gate: NO-GO</title>
+<title>Complaint tagger go-live gate: GO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -19,13 +19,13 @@ summary{cursor:pointer}.mark{display:inline-block;width:18px;font-weight:700}.ba
 li.fail{font-weight:600}li.na{color:var(--muted)}pre{background:var(--soft);padding:8px;overflow-x:auto;
 font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size:13px}
 </style></head><body><main>
-<h1>Complaint tagger go-live gate <span class="decision">NO-GO</span></h1>
-<p class="muted">Agent <code>agent:hybrid_recorded</code>, 76 cases, 1 run(s). Agent cost $0.0140, judge cost $0.0000, mean latency 0.3 ms per case.</p>
-<ul><li>run 1: 1 critical failure(s): safety_not_hidden on case 3004753838-2025-214778</li></ul>
+<h1>Complaint tagger go-live gate <span class="decision">GO</span></h1>
+<p class="muted">Agent <code>agent:hybrid_recorded</code>, 76 cases, 1 run(s). Agent cost $0.0138, judge cost $0.0000, mean latency 0.2 ms per case.</p>
+<ul><li>every rule held on all 1 run(s), no critical failures</li></ul>
 <h2>Pass counts by run</h2><div class="scroll"><table><tr><th>Run</th><th>Passed</th>
-<th>Critical failures</th></tr><tr><td>1</td><td>73 of 76</td><td>1</td></tr></table></div>
+<th>Critical failures</th></tr><tr><td>1</td><td>74 of 76</td><td>0</td></tr></table></div>
 <h2>Gate rules</h2><div class="scroll"><table><tr><th>Rule</th><th>Run</th><th>Passed</th><th>Needs</th>
-<th>Result</th></tr><tr><td>overall</td><td>1</td><td>73 of 76</td><td>69</td><td>held</td></tr><tr><td>free-text reports (no manufacturer template)</td><td>1</td><td>23 of 25</td><td>20</td><td>held</td></tr></table></div>
+<th>Result</th></tr><tr><td>overall</td><td>1</td><td>74 of 76</td><td>69</td><td>held</td></tr><tr><td>free-text reports (no manufacturer template)</td><td>1</td><td>23 of 25</td><td>20</td><td>held</td></tr></table></div>
 <h2>Cases</h2><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED. NO PRODUCT OR DATA WAS PROVIDED FOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -33,7 +33,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
- &quot;latency_s&quot;: 3.303
+ &quot;latency_s&quot;: 1.723
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. DATA WAS RECEIVED BUT DOES NOT REFLEC</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -41,7 +41,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000147,
- &quot;latency_s&quot;: 1.328
+ &quot;latency_s&quot;: 1.341
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. PERFORMANCE DATA WAS REVIEWED. THE AL</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -49,15 +49,15 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000154,
- &quot;latency_s&quot;: 1.289
+ &quot;latency_s&quot;: 1.732
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT SIGNAL LOSS OCCURRED. IT WAS DETERMINED THAT LOSS OF CONNEC</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.&quot;,
- &quot;confidence&quot;: 0.93,
+ &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
- &quot;latency_s&quot;: 1.143
+ &quot;latency_s&quot;: 1.098
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>SUBSEQUENT TO THE INITIAL MDR, IT WAS DETERMINED THAT A REPORT WAS SUBMITTED IN </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -65,7 +65,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000169,
- &quot;latency_s&quot;: 1.223
+ &quot;latency_s&quot;: 1.923
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. DATA HAS BEE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -73,7 +73,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
- &quot;latency_s&quot;: 1.244
+ &quot;latency_s&quot;: 3.173
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS OCCURRED. PERFORMANCE DATA W</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -81,7 +81,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.7,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000159,
- &quot;latency_s&quot;: 1.401
+ &quot;latency_s&quot;: 1.261
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. ON APPROXIMA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -89,31 +89,31 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.93,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000268,
- &quot;latency_s&quot;: 1.353
+ &quot;latency_s&quot;: 1.206
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. NO PRODUCT O</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;alert_failure&quot;,
- &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
- &quot;confidence&quot;: 0.9,
- &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000199,
- &quot;latency_s&quot;: 1.34
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT HAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;alert_failure&quot;,
- &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
- &quot;confidence&quot;: 0.9,
- &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.00026,
- &quot;latency_s&quot;: 1.493
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.93,
  &quot;notes&quot;: [],
+ &quot;cost_usd&quot;: 0.000199,
+ &quot;latency_s&quot;: 1.483
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT HAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;alert_failure&quot;,
+ &quot;method&quot;: &quot;hybrid&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
+ &quot;confidence&quot;: 0.85,
+ &quot;notes&quot;: [],
+ &quot;cost_usd&quot;: 0.000202,
+ &quot;latency_s&quot;: 1.303
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED. PRODUCT WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;alert_failure&quot;,
+ &quot;method&quot;: &quot;hybrid&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.&quot;,
+ &quot;confidence&quot;: 0.9,
+ &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000201,
- &quot;latency_s&quot;: 1.221
+ &quot;latency_s&quot;: 1.498
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT ALERT NOTIFICATION OCCURRED. PRODUCT HAS BEEN RECEIVED BUT </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;alert_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -121,7 +121,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.8,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000187,
- &quot;latency_s&quot;: 1.406
+ &quot;latency_s&quot;: 1.556
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -129,7 +129,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000196,
- &quot;latency_s&quot;: 1.134
+ &quot;latency_s&quot;: 1.248
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS THAT AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) AND THE B</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -137,7 +137,15 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00024,
- &quot;latency_s&quot;: 1.156
+ &quot;latency_s&quot;: 1.063
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
+ &quot;method&quot;: &quot;hybrid&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
+ &quot;confidence&quot;: 0.97,
+ &quot;notes&quot;: [],
+ &quot;cost_usd&quot;: 0.000159,
+ &quot;latency_s&quot;: 2.185
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -145,63 +153,55 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000153,
- &quot;latency_s&quot;: 1.39
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
- &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;A DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
- &quot;confidence&quot;: 0.97,
- &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000153,
- &quot;latency_s&quot;: 1.069
+ &quot;latency_s&quot;: 1.171
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED NEEDLE OR CANNULA OCCURRED. THE SENSOR WAS INSER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;A DETACHED NEEDLE OR CANNULA OCCURRED.&quot;,
- &quot;confidence&quot;: 0.97,
+ &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000152,
- &quot;latency_s&quot;: 1.131
+ &quot;latency_s&quot;: 1.499
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED. NO PRODUCT OR D</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
+ &quot;evidence&quot;: &quot;A DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000156,
- &quot;latency_s&quot;: 2.138
+ &quot;cost_usd&quot;: 0.000149,
+ &quot;latency_s&quot;: 1.824
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED. PER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.7,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000176,
- &quot;latency_s&quot;: 1.216
+ &quot;latency_s&quot;: 1.416
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED. P</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE OCCURRED&quot;,
+ &quot;evidence&quot;: &quot;NO READINGS/ SENSOR ERROR/ BRIEF SENSOR ISSUE&quot;,
  &quot;confidence&quot;: 0.8,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000173,
- &quot;latency_s&quot;: 1.261
+ &quot;cost_usd&quot;: 0.000328,
+ &quot;latency_s&quot;: 2.096
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED. THE WEARABLE WAS INSERTED INT</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED.&quot;,
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000207,
- &quot;latency_s&quot;: 1.172
+ &quot;latency_s&quot;: 1.246
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;HOWEVER, THERE WAS REDNESS AND SWELLING NOTED AT THE INSERTION SITE.&quot;,
- &quot;confidence&quot;: 0.8,
+ &quot;evidence&quot;: &quot;THERE WAS REDNESS AND SWELLING NOTED AT THE INSERTION SITE&quot;,
+ &quot;confidence&quot;: 0.75,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000209,
- &quot;latency_s&quot;: 1.161
+ &quot;cost_usd&quot;: 0.000206,
+ &quot;latency_s&quot;: 1.386
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -209,31 +209,31 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000326,
- &quot;latency_s&quot;: 1.125
+ &quot;latency_s&quot;: 1.308
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYST</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYSTEM&quot;,
+ &quot;evidence&quot;: &quot;A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYSTEM&quot;,
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000209,
- &quot;latency_s&quot;: 1.417
+ &quot;cost_usd&quot;: 0.000202,
+ &quot;latency_s&quot;: 1.213
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED. PRODUCT HAS BEEN RECE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED.&quot;,
- &quot;confidence&quot;: 0.7,
+ &quot;evidence&quot;: &quot;A RECEIVER REINITIALIZATION OCCURRED&quot;,
+ &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000164,
- &quot;latency_s&quot;: 1.188
+ &quot;cost_usd&quot;: 0.000158,
+ &quot;latency_s&quot;: 1.145
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED. NO PRODUCT OR DATA WA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;A RECEIVER REINITIALIZATION OCCURRED&quot;,
+ &quot;evidence&quot;: &quot;A RECEIVER REINITIALIZATION OCCURRED.&quot;,
  &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000144,
- &quot;latency_s&quot;: 1.22
+ &quot;latency_s&quot;: 1.125
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED. PRODUCT HAS BEEN </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -241,23 +241,23 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000182,
- &quot;latency_s&quot;: 2.474
+ &quot;latency_s&quot;: 1.264
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED. IT WAS INDICATED </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;receiver_hardware&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED&quot;,
- &quot;confidence&quot;: 0.8,
+ &quot;evidence&quot;: &quot;UNEXPECTED RECEIVER SHUTDOWN OCCURRED&quot;,
+ &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000168,
- &quot;latency_s&quot;: 1.509
+ &quot;cost_usd&quot;: 0.000167,
+ &quot;latency_s&quot;: 1.159
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT THE READINGS FROZE. IT WAS INDICATED THAT THE PATIENT WAS U</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT THE READINGS FROZE.&quot;,
- &quot;confidence&quot;: 0.7,
+ &quot;confidence&quot;: 0.8,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000164,
- &quot;latency_s&quot;: 2.393
+ &quot;latency_s&quot;: 1.539
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT THE READINGS FROZE. PRODUCT WAS PROVIDED FOR INVESTIGATION.</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -265,81 +265,84 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000136,
- &quot;latency_s&quot;: 1.105
+ &quot;latency_s&quot;: 1.04
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT THE READINGS FROZE. THE SENSOR WAS INSERTED INTO THE ARM ON</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;THE READINGS FROZE&quot;,
+ &quot;evidence&quot;: &quot;THE READINGS FROZE.&quot;,
  &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000141,
- &quot;latency_s&quot;: 1.015
+ &quot;latency_s&quot;: 1.897
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. IT WAS INDICATED THAT THE OPER</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED&quot;,
- &quot;confidence&quot;: 0.9,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED.&quot;,
+ &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
- &quot;latency_s&quot;: 1.323
+ &quot;latency_s&quot;: 2.392
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED. THE WEARABLE WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED.&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED&quot;,
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000226,
- &quot;latency_s&quot;: 1.837
+ &quot;latency_s&quot;: 1.271
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED. G7 WEARABLE AND APPLICATOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.00024,
- &quot;latency_s&quot;: 1.125
+ &quot;cost_usd&quot;: 0.000239,
+ &quot;latency_s&quot;: 1.421
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A WEARABLE FAILURE OCCURRED. THE WEARABLE WAS INSERTED INTO</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS SHOWING A SENSOR FAILURE&quot;,
- &quot;confidence&quot;: 0.6,
- &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000444,
- &quot;latency_s&quot;: 2.884
+ &quot;evidence&quot;: &quot;WEARABLE FAILURE OCCURRED&quot;,
+ &quot;confidence&quot;: 0.5,
+ &quot;notes&quot;: [
+  &quot;confidence 0.5 below 0.6&quot;,
+  &quot;template allegation says early_sensor_failure; LLM said early_sensor_failure&quot;
+ ],
+ &quot;cost_usd&quot;: 0.00025,
+ &quot;latency_s&quot;: 1.218
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A SKIN REACTION OCCURRED.&quot;,
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000221,
- &quot;latency_s&quot;: 1.332
+ &quot;cost_usd&quot;: 0.00022,
+ &quot;latency_s&quot;: 2.459
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM G7 IS FAILING MY SON! OFFICIALLY DONE WITH DEXCOM G7. G7 SUCKS. THEY ARE </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;WE HAVE HAD 9, YES NINE, FAIL EARLY.&quot;,
- &quot;confidence&quot;: 0.7,
+ &quot;confidence&quot;: 0.8,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000218,
- &quot;latency_s&quot;: 2.059
+ &quot;latency_s&quot;: 1.232
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000172,
- &quot;latency_s&quot;: 1.356
+ &quot;cost_usd&quot;: 0.000173,
+ &quot;latency_s&quot;: 1.192
 }</pre></div></details><details open><summary><span class='mark bad'>✗</span> <b>CGM ACCURACY. THE SENSOR WAS INSERTED INTO THE ABDOMEN, WHICH IS OFF-LABEL USAGE</b> <span class='muted'>free_text · 0 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: FAIL · 0 ms</div><ul><li class='fail'><code>mode</code> FAIL: tagged needs_review, label is inaccurate_readings</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;needs_review&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;CGM ACCURACY. THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE&quot;,
+ &quot;evidence&quot;: &quot;CGM ACCURACY. THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE OF THE PARKES ERROR GRID.&quot;,
  &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [
   &quot;evidence quote not found in narrative&quot;
  ],
- &quot;cost_usd&quot;: 0.000154,
- &quot;latency_s&quot;: 1.239
+ &quot;cost_usd&quot;: 0.000162,
+ &quot;latency_s&quot;: 1.148
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/11/2025, THAT ON (B)(6) 2025, THE PATIENT EXPERIENCE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -347,7 +350,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000186,
- &quot;latency_s&quot;: 1.319
+ &quot;latency_s&quot;: 3.443
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/13/2025, THAT ON THE SAME DAY, THE PATIENT EXPERIENC</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -355,7 +358,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000196,
- &quot;latency_s&quot;: 1.249
+ &quot;latency_s&quot;: 1.141
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>READING IS STUCK AT 208.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -363,15 +366,15 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000125,
- &quot;latency_s&quot;: 2.705
+ &quot;latency_s&quot;: 0.926
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00016,
- &quot;latency_s&quot;: 1.194
+ &quot;latency_s&quot;: 1.24
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/16/2025, THAT ON (B)(6)2025, THE PATIENT EXPERIENCED</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -379,7 +382,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000193,
- &quot;latency_s&quot;: 1.178
+ &quot;latency_s&quot;: 1.269
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM WAS MADE AWARE ON 02/18/2025, THAT ON (B)(6) 2025, THE PATIENT EXPERIENCE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -387,23 +390,23 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00019,
- &quot;latency_s&quot;: 1.104
+ &quot;latency_s&quot;: 1.149
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00016,
- &quot;latency_s&quot;: 1.189
+ &quot;latency_s&quot;: 1.265
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED. THE SENSOR WAS INSERTED INTO THE AB</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
- &quot;latency_s&quot;: 1.599
+ &quot;latency_s&quot;: 1.324
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>CGM ACCURACY. THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE OF THE PARKES E</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -411,33 +414,31 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000164,
- &quot;latency_s&quot;: 1.83
+ &quot;latency_s&quot;: 2.079
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DON ABBEY ORG Q1 2025 &quot;ALL HANDS&quot; MEETING.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;other&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;DON ABBEY ORG Q1 2025 \&quot;ALL HANDS\&quot; MEETING.&quot;,
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000136,
- &quot;latency_s&quot;: 1.107
-}</pre></div></details><details open><summary><span class='mark bad'>✗</span> <b>OUT OF 3 MONTH SUPPLY, 3 DEXCOM7 FAILED, THAT AMOUNTS TO 1 MONTH SUPPLY OF DEXCO</b> <span class='muted'>free_text · 0 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: FAIL · 0 ms</div><ul><li class='fail'><code>mode</code> FAIL: tagged needs_review, label is early_sensor_failure</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;needs_review&quot;,
+ &quot;cost_usd&quot;: 0.000135,
+ &quot;latency_s&quot;: 2.588
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>OUT OF 3 MONTH SUPPLY, 3 DEXCOM7 FAILED, THAT AMOUNTS TO 1 MONTH SUPPLY OF DEXCO</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;FIRST TIME IT HAPPENED, WE THOUGHT IT WAS READING CORRECTLY&quot;,
- &quot;confidence&quot;: 0.55,
- &quot;notes&quot;: [
-  &quot;confidence 0.55 below 0.6&quot;
- ],
- &quot;cost_usd&quot;: 0.000333,
- &quot;latency_s&quot;: 2.538
+ &quot;evidence&quot;: &quot;3 DEXCOM7 FAILED, THAT AMOUNTS TO 1 MONTH SUPPLY&quot;,
+ &quot;confidence&quot;: 0.6,
+ &quot;notes&quot;: [],
+ &quot;cost_usd&quot;: 0.000296,
+ &quot;latency_s&quot;: 2.089
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>AFTER SUBMISSION OF THE INITIAL MDR, PRODUCT WAS RECEIVED ON 2/18/2025 AND IT WA</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.&quot;,
- &quot;confidence&quot;: 0.95,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED&quot;,
+ &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
- &quot;latency_s&quot;: 1.189
+ &quot;latency_s&quot;: 1.075
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED. DATA WAS PROVIDED FOR INVESTIGATI</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -445,7 +446,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000145,
- &quot;latency_s&quot;: 2.169
+ &quot;latency_s&quot;: 1.246
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>2 DEXCOM SENSORS FELL OFF WITHIN 24 HOURS OF USING. DEXCOM REFUSES TO REPLACE. I</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -453,7 +454,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000159,
- &quot;latency_s&quot;: 1.224
+ &quot;latency_s&quot;: 1.206
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>THE REPORTER CALLED IN TO REPORT HER SENSOR FELL OFF IN THE MIDDLE OF THE NIGHT </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -461,17 +462,15 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.8,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000161,
- &quot;latency_s&quot;: 1.343
-}</pre></div></details><details open><summary><span class='mark bad'>✗</span> <b>IT WAS REPORTED THAT AN ADVERSE EVENT OCCURRED. ON (B)(6) 2025 AT APPROXIMATELY </b> <span class='muted'>template · 0 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: FAIL · 0 ms</div><ul><li class='fail'><code>mode</code> FAIL: tagged adhesion, label is inaccurate_readings</li><li class='fail'><code>safety_not_hidden</code> FAIL (critical): safety report filed as adhesion</li></ul><pre>{
- &quot;mode&quot;: &quot;adhesion&quot;,
+ &quot;latency_s&quot;: 1.141
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT AN ADVERSE EVENT OCCURRED. ON (B)(6) 2025 AT APPROXIMATELY </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;FELL OFF&quot;,
+ &quot;evidence&quot;: &quot;THE SENSOR IMMEDIATELY REGISTERED A \&quot;LOW\&quot; GLUCOSE READING&quot;,
  &quot;confidence&quot;: 0.8,
- &quot;notes&quot;: [
-  &quot;template allegation says adhesion; LLM said inaccurate_readings&quot;
- ],
+ &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000248,
- &quot;latency_s&quot;: 1.265
+ &quot;latency_s&quot;: 2.625
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SKIN REACTION OCCURRED. THE WEARABLE WAS INSERTED INTO TH</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;skin_reaction&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -479,7 +478,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000206,
- &quot;latency_s&quot;: 1.016
+ &quot;latency_s&quot;: 2.489
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -487,7 +486,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
- &quot;latency_s&quot;: 2.319
+ &quot;latency_s&quot;: 1.252
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -495,7 +494,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
- &quot;latency_s&quot;: 1.356
+ &quot;latency_s&quot;: 1.255
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED. THE SENSOR WAS INSERTED I</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -503,23 +502,23 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000155,
- &quot;latency_s&quot;: 1.754
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;signal_loss&quot;,
- &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED.&quot;,
- &quot;confidence&quot;: 0.85,
- &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000158,
- &quot;latency_s&quot;: 1.336
+ &quot;latency_s&quot;: 1.196
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED&quot;,
+ &quot;confidence&quot;: 0.85,
+ &quot;notes&quot;: [],
+ &quot;cost_usd&quot;: 0.000158,
+ &quot;latency_s&quot;: 0.99
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED. PERFORMANCE DATA WAS REVIEWED. A </b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;signal_loss&quot;,
+ &quot;method&quot;: &quot;hybrid&quot;,
+ &quot;evidence&quot;: &quot;IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED.&quot;,
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000162,
- &quot;latency_s&quot;: 1.137
+ &quot;latency_s&quot;: 1.403
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. DATA WAS EVALUATED AND THE ALL</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -527,23 +526,23 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.97,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00014,
- &quot;latency_s&quot;: 1.07
+ &quot;latency_s&quot;: 1.128
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED. NO DATA OR PRODUCT WAS PROVIDE</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;app_software&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;A DEXCOM APP CRASH OCCURRED&quot;,
- &quot;confidence&quot;: 0.97,
+ &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00014,
- &quot;latency_s&quot;: 1.174
+ &quot;latency_s&quot;: 1.126
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>MY DEXCOM G7 SENSOR CONTINUES TO GIVE INACCURATE READINGS MAKING MY SAFETY BECOM</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;MY DEXCOM G7 SENSOR CONTINUES TO GIVE INACCURATE READINGS&quot;,
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000148,
- &quot;latency_s&quot;: 1.703
+ &quot;cost_usd&quot;: 0.000147,
+ &quot;latency_s&quot;: 1.218
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM G7 CGM SENSOR ISSUES. CONSTANT WRONG READINGS. FAILURE TO EJECT WHEN APPL</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -551,7 +550,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000189,
- &quot;latency_s&quot;: 1.461
+ &quot;latency_s&quot;: 1.412
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>REPORTER STATED THAT THEY HAD TWO OF THREE DEXCOM G7 SENSOR FAILURES YESTERDAY. </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -559,7 +558,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.8,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000149,
- &quot;latency_s&quot;: 1.418
+ &quot;latency_s&quot;: 1.416
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>ON (B)(6) 2024 PATIENT RECEIVED DEXCOM G7. TEN DAYS LATER WHEN THE SENSORS NEEDE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -567,15 +566,17 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000178,
- &quot;latency_s&quot;: 1.288
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>TYPE 1 DIABETIC USING DEXCOM G7 CGM DEVICE. DEVICE HAS OFTEN FAILED IN THE MIDDL</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;early_sensor_failure&quot;,
+ &quot;latency_s&quot;: 1.08
+}</pre></div></details><details open><summary><span class='mark bad'>✗</span> <b>TYPE 1 DIABETIC USING DEXCOM G7 CGM DEVICE. DEVICE HAS OFTEN FAILED IN THE MIDDL</b> <span class='muted'>free_text · 0 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: FAIL · 0 ms</div><ul><li class='fail'><code>mode</code> FAIL: tagged needs_review, label is early_sensor_failure</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;needs_review&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;DEVICE HAS OFTEN FAILED IN THE MIDDLE OF THE NIGHT&quot;,
- &quot;confidence&quot;: 0.6,
- &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000332,
- &quot;latency_s&quot;: 1.807
+ &quot;confidence&quot;: 0.5,
+ &quot;notes&quot;: [
+  &quot;confidence 0.5 below 0.6&quot;
+ ],
+ &quot;cost_usd&quot;: 0.00021,
+ &quot;latency_s&quot;: 1.62
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>MY DEXCOM G7 FAILED. THIS LOT NUMBER HAS HAD CONTINUOUS ISSUES.</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;early_sensor_failure&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -583,7 +584,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000148,
- &quot;latency_s&quot;: 1.302
+ &quot;latency_s&quot;: 1.612
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>MY DEXCOM G7 SENSOR BEGAN LIFTING. NOT THE STICKER THAT HOLDS IT IN PLACE, THE S</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -591,7 +592,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00014,
- &quot;latency_s&quot;: 1.041
+ &quot;latency_s&quot;: 1.41
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I WEAR THE DEXCOM G7 THE PROBLEM IS THAT 1 OF EVERY 3 SENSORS FALL OFF I USE THE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;adhesion&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -599,7 +600,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.95,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000154,
- &quot;latency_s&quot;: 1.136
+ &quot;latency_s&quot;: 1.322
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>OMNIPOD AND DEXCOM 7 CAUSED HYPOGLYCEMIA BY OVERDOSING INSULIN DUE TO INCORRECT </b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='pass'><code>safety_not_hidden</code> PASS (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;inaccurate_readings&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -607,23 +608,23 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.93,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000151,
- &quot;latency_s&quot;: 1.267
+ &quot;latency_s&quot;: 1.189
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I USE DEXCOM G7 GLUCOSE MONITORING DEVICE. IT&#x27;S ALWAYS WORKED GREAT UP UNTIL REC</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;SENSORS THAT FAILED TO INITIALLY PAIR WITH MY PHONE&quot;,
- &quot;confidence&quot;: 0.9,
+ &quot;evidence&quot;: &quot;FAILED TO INITIALLY PAIR WITH MY PHONE&quot;,
+ &quot;confidence&quot;: 0.85,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000187,
- &quot;latency_s&quot;: 1.179
+ &quot;cost_usd&quot;: 0.000183,
+ &quot;latency_s&quot;: 1.168
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>DEXCOM G7 SENSOR APPLICATION FAILURE. THIS HAPPENED ON 7 OF THE 9 DEXCOM G7 SENS</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;DEXCOM G7 SENSOR APPLICATION FAILURE&quot;,
+ &quot;evidence&quot;: &quot;DEXCOM G7 SENSOR APPLICATION FAILURE. THIS HAPPENED ON 7 OF THE 9&quot;,
  &quot;confidence&quot;: 0.6,
  &quot;notes&quot;: [],
- &quot;cost_usd&quot;: 0.000149,
- &quot;latency_s&quot;: 1.329
+ &quot;cost_usd&quot;: 0.000159,
+ &quot;latency_s&quot;: 1.486
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I&#x27;VE HAD MANY SENSOR FAILURES OF THE DEXCOM G7 OVER THE LAST SEVERAL MONTHS. TYP</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -631,7 +632,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000191,
- &quot;latency_s&quot;: 1.038
+ &quot;latency_s&quot;: 1.045
 }</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>I USE THE DEXCOM G7 CGM FOR MY TYPE 1 DIABETES. THERE IS A QUALITY CONTROL ISSUE</b> <span class='muted'>free_text · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;sensor_wire_or_needle&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -639,7 +640,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;confidence&quot;: 0.9,
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000229,
- &quot;latency_s&quot;: 1.069
+ &quot;latency_s&quot;: 1.225
 }</pre></div></details>
 <h2>Checks</h2><div class="scroll"><table><tr><td><code>mode</code></td><td></td><td>The tag is the labeled failure mode.</td></tr><tr><td><code>safety_not_hidden</code></td><td>critical</td><td>A report labeled with a safety mode (alerts, inaccurate readings, skin reactions) is tagged with that mode or sent to a person, never silently filed under another mode.</td></tr></table></div>
 <footer class="muted">Made with <a href="https://github.com/pg2342-hub/golive-gate">golive-gate</a>.</footer>
