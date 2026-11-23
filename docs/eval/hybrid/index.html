@@ -20,12 +20,12 @@ li.fail{font-weight:600}li.na{color:var(--muted)}pre{background:var(--soft);padd
 font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size:13px}
 </style></head><body><main>
 <h1>Complaint tagger go-live gate <span class="decision">GO</span></h1>
-<p class="muted">Agent <code>agent:hybrid_recorded</code>, 76 cases, 1 run(s). Agent cost $0.0138, judge cost $0.0000, mean latency 0.4 ms per case.</p>
+<p class="muted">Agent <code>agent:hybrid_recorded</code>, 76 cases, 1 run(s). Agent cost $0.0138, judge cost $0.0000, mean latency 0.3 ms per case.</p>
 <ul><li>every rule held on all 1 run(s), no critical failures</li></ul>
 <h2>Pass counts by run</h2><div class="scroll"><table><tr><th>Run</th><th>Passed</th>
-<th>Critical failures</th></tr><tr><td>1</td><td>74 of 76</td><td>0</td></tr></table></div>
+<th>Critical failures</th></tr><tr><td>1</td><td>73 of 76</td><td>0</td></tr></table></div>
 <h2>Gate rules</h2><div class="scroll"><table><tr><th>Rule</th><th>Run</th><th>Passed</th><th>Needs</th>
-<th>Result</th></tr><tr><td>overall</td><td>1</td><td>74 of 76</td><td>69</td><td>held</td></tr><tr><td>free-text reports (no manufacturer template)</td><td>1</td><td>23 of 25</td><td>20</td><td>held</td></tr></table></div>
+<th>Result</th></tr><tr><td>overall</td><td>1</td><td>73 of 76</td><td>69</td><td>held</td></tr><tr><td>free-text reports (no manufacturer template)</td><td>1</td><td>23 of 25</td><td>20</td><td>held</td></tr></table></div>
 <h2>Cases</h2><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED. NO PRODUCT OR DATA WAS PROVIDED FOR</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
@@ -298,10 +298,10 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.000239,
  &quot;latency_s&quot;: 1.421
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>IT WAS REPORTED THAT A WEARABLE FAILURE OCCURRED. THE WEARABLE WAS INSERTED INTO</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
- &quot;mode&quot;: &quot;early_sensor_failure&quot;,
+}</pre></div></details><details open><summary><span class='mark bad'>✗</span> <b>IT WAS REPORTED THAT A WEARABLE FAILURE OCCURRED. THE WEARABLE WAS INSERTED INTO</b> <span class='muted'>template · 0 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: FAIL · 0 ms</div><ul><li class='fail'><code>mode</code> FAIL: tagged needs_review, label is early_sensor_failure</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+ &quot;mode&quot;: &quot;needs_review&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
- &quot;evidence&quot;: &quot;WEARABLE FAILURE OCCURRED&quot;,
+ &quot;evidence&quot;: &quot;IT WAS SHOWING A SENSOR FAILURE&quot;,
  &quot;confidence&quot;: 0.5,
  &quot;notes&quot;: [
   &quot;confidence 0.5 below 0.6&quot;,
@@ -439,7 +439,7 @@ font-size:12px;margin:4px 0}code{font-size:13px}footer{margin-top:40px;font-size
  &quot;notes&quot;: [],
  &quot;cost_usd&quot;: 0.00017,
  &quot;latency_s&quot;: 1.075
-}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED. DATA WAS PROVIDED FOR INVESTIGATI</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 1 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
+}</pre></div></details><details><summary><span class='mark ok'>✓</span> <b>THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED. DATA WAS PROVIDED FOR INVESTIGATI</b> <span class='muted'>template · 1 of 1 runs</span></summary><div class='run'><div class='runhead'>Run 1: pass · 0 ms</div><ul><li class='pass'><code>mode</code> PASS</li><li class='na'><code>safety_not_hidden</code> NA (critical)</li></ul><pre>{
  &quot;mode&quot;: &quot;signal_loss&quot;,
  &quot;method&quot;: &quot;hybrid&quot;,
  &quot;evidence&quot;: &quot;THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED.&quot;,
