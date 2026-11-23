@@ -1,0 +1,909 @@
+{
+ "month": "2026-08",
+ "sampled": 200,
+ "rules_unplaced": 41,
+ "model": "claude-haiku-5-5",
+ "tags": {
+  "3004753838-2026-214519": {
+   "narrative": "It was reported that pairing failure occurred. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or appro",
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000169,
+    "latency_s": 1.128
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000169,
+    "latency_s": 1.128
+   }
+  },
+  "3004753838-2026-216354": {
+   "narrative": "It was reported that poor patch adhesion occurred.\u00bfAnalysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or a",
+   "llm": {
+    "mode": "adhesion",
+    "method": "llm",
+    "evidence": "It was reported that poor patch adhesion occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000111,
+    "latency_s": 0.776
+   },
+   "hybrid": {
+    "mode": "adhesion",
+    "method": "hybrid",
+    "evidence": "It was reported that poor patch adhesion occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000111,
+    "latency_s": 0.776
+   }
+  },
+  "3004753838-2026-216421": {
+   "narrative": "It was reported that pairing failure occurred. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or appro",
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000179,
+    "latency_s": 1.255
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000179,
+    "latency_s": 1.255
+   }
+  },
+  "3004753838-2026-217279": {
+   "narrative": "It was reported that pairing failure occurred. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or appro",
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000168,
+    "latency_s": 1.118
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000168,
+    "latency_s": 1.118
+   }
+  },
+  "MW6000501": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000254,
+    "latency_s": 1.477
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000254,
+    "latency_s": 1.477
+   }
+  },
+  "MW6000502": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number:1725306003, Serial Number: (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and repla",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000273,
+    "latency_s": 1.686
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000273,
+    "latency_s": 1.686
+   }
+  },
+  "MW6000517": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail:5 in total. I have called Dexcom to report the multiple issues with this lot of sensors,and they are unwilling to take the remaining sensor back because it's \"not policy\" to takeback a sensor from a lot that keeps failing from one customer, and ",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000274,
+    "latency_s": 1.571
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000274,
+    "latency_s": 1.571
+   }
+  },
+  "MW6000518": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000268,
+    "latency_s": 1.546
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000268,
+    "latency_s": 1.546
+   }
+  },
+  "MW6000519": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. I have had multiple sensors from this lot fail: 5 in total. I have called Dexcom to report the multiple issues with this lot of sensors and they are unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensors from a lot that keep failing from one customer, and replace that whole lotof sensors the customer",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000269,
+    "latency_s": 1.87
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000269,
+    "latency_s": 1.87
+   }
+  },
+  "MW6000520": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000268,
+    "latency_s": 1.52
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000268,
+    "latency_s": 1.52
+   }
+  },
+  "MW6000521": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000272,
+    "latency_s": 1.536
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000272,
+    "latency_s": 1.536
+   }
+  },
+  "MW6000522": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000273,
+    "latency_s": 1.56
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000273,
+    "latency_s": 1.56
+   }
+  },
+  "MW6000523": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called Dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000273,
+    "latency_s": 1.623
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000273,
+    "latency_s": 1.623
+   }
+  },
+  "MW6000524": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000264,
+    "latency_s": 1.469
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000264,
+    "latency_s": 1.469
+   }
+  },
+  "MW6000525": {
+   "narrative": "Another Dexcom G7 15-day sensor failed again from the same lot. Lot number1725306003, Serial Number (b)(6). I have had multiple sensors from this lot fail.5 in total. I have called dexcom to report the multiple issues with this lot of sensors,and they unwilling to take the remaining sensor back because it's \"not policy\" to takeback sensor from a lot that keep failing from one customer, and replace",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000271,
+    "latency_s": 1.715
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "Another Dexcom G7 15-day sensor failed again from the same lot.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000271,
+    "latency_s": 1.715
+   }
+  },
+  "3004753838-2026-218931": {
+   "narrative": "After submission of the initial MDR, product was received on 9/9/2026 and it was determined this complaint is Not Reportable per (b)(4).",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "it was determined this complaint is Not Reportable",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 9.4e-05,
+    "latency_s": 0.678
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "it was determined this complaint is Not Reportable",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 9.4e-05,
+    "latency_s": 0.678
+   }
+  },
+  "3004753838-2026-219129": {
+   "narrative": "It was reported that pairing failure occurred. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or appro",
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.00017,
+    "latency_s": 1.228
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.00017,
+    "latency_s": 1.228
+   }
+  },
+  "MW6000646": {
+   "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 mos. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the se",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.792
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.792
+   }
+  },
+  "MW6000643": {
+   "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 mos. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the se",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.625
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.625
+   }
+  },
+  "MW6000644": {
+   "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 mos. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the se",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.673
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.673
+   }
+  },
+  "MW6000655": {
+   "narrative": "I've had 4 sensors fail from the same lot of Dexcom G7 in the last 5 months. I'vecommunicated these failures to Dexcom - some of the sensors have lost connectionintermittently, resulting in a correction bolus being administered, b/c the sensorreconnects and sees that my blood sugar may have risen slightly - but the algorithmsees that as a rapid spike (although it's not) in my blood sugar. when the",
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000245,
+    "latency_s": 1.727
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "some of the sensors have lost connectionintermittently",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000245,
+    "latency_s": 1.727
+   }
+  },
+  "3004753838-2026-220787": {
+   "narrative": "It was reported that an unspecified error message occurred. Data was provided for investigation. Confirmation of the complaint was confirmed via data. However, signal loss over an hour was found in connection to the allegation. The probable cause was the transmitter and app were unable to establish a connection. No injury or medical intervention was reported.",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000228,
+    "latency_s": 1.93
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000228,
+    "latency_s": 1.93
+   }
+  },
+  "3004753838-2026-221400": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000167,
+    "latency_s": 1.073
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000167,
+    "latency_s": 1.073
+   }
+  },
+  "3004753838-2026-221389": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000176,
+    "latency_s": 1.225
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000176,
+    "latency_s": 1.225
+   }
+  },
+  "3004753838-2026-221448": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 without Dexcom\u00bfs knowledge or approval. This ",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.00015,
+    "latency_s": 0.922
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.00015,
+    "latency_s": 0.922
+   }
+  },
+  "3004753838-2026-221609": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 without Dexcom\u00bfs knowledge or approval. This ",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000144,
+    "latency_s": 0.994
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000144,
+    "latency_s": 0.994
+   }
+  },
+  "3004753838-2026-222474": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000158,
+    "latency_s": 1.307
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000158,
+    "latency_s": 1.307
+   }
+  },
+  "3004753838-2026-222458": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000178,
+    "latency_s": 1.308
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000178,
+    "latency_s": 1.308
+   }
+  },
+  "3004753838-2026-222464": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 without Dexcom\u00bfs knowledge or approval. This ",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000161,
+    "latency_s": 1.535
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000161,
+    "latency_s": 1.535
+   }
+  },
+  "3004753838-2026-222537": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 without Dexcom\u00bfs knowledge or approval. This ",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000142,
+    "latency_s": 1.014
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000142,
+    "latency_s": 1.014
+   }
+  },
+  "3004753838-2026-222528": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000156,
+    "latency_s": 1.11
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000156,
+    "latency_s": 1.11
+   }
+  },
+  "3004753838-2026-222571": {
+   "narrative": "It was reported that poor patch adhesion occurred.\u00bfAnalysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or a",
+   "llm": {
+    "mode": "adhesion",
+    "method": "llm",
+    "evidence": "It was reported that poor patch adhesion occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000111,
+    "latency_s": 0.769
+   },
+   "hybrid": {
+    "mode": "adhesion",
+    "method": "hybrid",
+    "evidence": "It was reported that poor patch adhesion occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000111,
+    "latency_s": 0.769
+   }
+  },
+  "3004753838-2026-222701": {
+   "narrative": "The product was evaluated. An external visual inspection was performed and passed. Receiver charge and boot tests were performed and failed due to Receiver won\u00bft turn on. Functional tests were not performed due to Receiver won\u00bft turn on. An internal visual inspection was performed and failed due to Water Damage. The receiver log was not downloaded due to Receiver won\u00bft turn on. The allegation was ",
+   "llm": {
+    "mode": "receiver_hardware",
+    "method": "llm",
+    "evidence": "Receiver won\u00bft turn on",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000178,
+    "latency_s": 1.282
+   },
+   "hybrid": {
+    "mode": "receiver_hardware",
+    "method": "hybrid",
+    "evidence": "Receiver won\u00bft turn on",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000178,
+    "latency_s": 1.282
+   }
+  },
+  "MW6000903": {
+   "narrative": "Dexcom g7 cgm\u00bfs (Continuous Glucose Monitoring System) are supposed to last 15 days. They rarely never do. But to a type 1 diabetic that has the sensors repeatedly go out while sleeping, as a pump user, therapy isn't consistent and can kill a diabetic. These sensors should be recalled and pulled and completely redone. As a Medicare recipient, we are forced to used this equipment as it's expensive ",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "sensors repeatedly go out while sleeping",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000199,
+    "latency_s": 1.214
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "sensors repeatedly go out while sleeping",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000199,
+    "latency_s": 1.214
+   }
+  },
+  "3004753838-2026-223690": {
+   "narrative": "It was reported that a Bluetooth is off warning message occurred. Data Analysis will not confirm the alleged complaint or determine a root cause. The probable cause could not be determined. No injury or medical intervention was reported.",
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000225,
+    "latency_s": 2.011
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000225,
+    "latency_s": 2.011
+   }
+  },
+  "MW6000964": {
+   "narrative": "The Dexcom G7 10 day continuous glucose monitors are wildly inaccurate on a regularbasis. I have multiple children relying on accurate readings from this equipment, as thevalues given are looped with their insulin pumps to determine insulin dosages- and theG7 sensors are REGULARLY giving readings that are 100 pts or more off from the truefingerstick confirmed blood sugars. I have reported these pr",
+   "llm": {
+    "mode": "inaccurate_readings",
+    "method": "llm",
+    "evidence": "the Dexcom G7 was reading a blood sugar of 181mg/dl, when in fact theblood sugar was 500",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000139,
+    "latency_s": 0.799
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "the Dexcom G7 was reading a blood sugar of 181mg/dl, when in fact theblood sugar was 500",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000139,
+    "latency_s": 0.799
+   }
+  },
+  "3004753838-2026-223966": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000162,
+    "latency_s": 1.029
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000162,
+    "latency_s": 1.029
+   }
+  },
+  "3004753838-2026-224115": {
+   "narrative": "It was reported that sensor didn't work occurred.\u00bfAnalysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "It was reported that sensor didn't work occurred.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000206,
+    "latency_s": 1.332
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "It was reported that sensor didn't work occurred.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000206,
+    "latency_s": 1.332
+   }
+  },
+  "3004753838-2026-224353": {
+   "narrative": "It was reported that pairing failure occurred. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or appro",
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000181,
+    "latency_s": 1.306
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "It was reported that pairing failure occurred.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000181,
+    "latency_s": 1.306
+   }
+  },
+  "3004753838-2026-224986": {
+   "narrative": "It was reported that labeling issue was reported. Analysis indicated the lot number for this complaint record is associated with the third-party unauthorized product release and use of non-conforming product that was scrapped by Dexcom. The third party acted as an unauthorized remanufacturer under 21 CFR 820.3 and engaged in prohibited actions under 21 U.S.C. \u00a7 331 without Dexcom\u00bfs knowledge or ap",
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000151,
+    "latency_s": 1.012
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "It was reported that labeling issue was reported.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000151,
+    "latency_s": 1.012
+   }
+  },
+  "3004753838-2026-225549": {
+   "narrative": "It was reported that \"Wire/Needle/Cannula Damage or Missing\" occurred. No product or data was provided for investigation. The allegation and the probable cause cannot be determined. No serious or prolonged patient harm or medical intervention was reported.",
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "Wire/Needle/Cannula Damage or Missing",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000173,
+    "latency_s": 1.176
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "Wire/Needle/Cannula Damage or Missing",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000173,
+    "latency_s": 1.176
+   }
+  }
+ }
+}

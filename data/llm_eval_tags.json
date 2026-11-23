@@ -1,0 +1,1596 @@
+{
+ "model": "claude-haiku-5-5",
+ "tagged_on": "2026-11-23",
+ "tags": {
+  "3004753838-2025-013376": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000136,
+    "latency_s": 0.869
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SIGNAL LOSS OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000136,
+    "latency_s": 0.869
+   }
+  },
+  "3004753838-2025-013439": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000113,
+    "latency_s": 0.709
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000113,
+    "latency_s": 0.709
+   }
+  },
+  "3004753838-2025-013957": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000119,
+    "latency_s": 0.727
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000119,
+    "latency_s": 0.727
+   }
+  },
+  "3004753838-2025-014338": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000121,
+    "latency_s": 0.729
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT SIGNAL LOSS OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000121,
+    "latency_s": 0.729
+   }
+  },
+  "3004753838-2025-028605": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.709
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says alert_failure; LLM said needs_review"
+    ],
+    "cost_usd": 0.000246,
+    "latency_s": 1.709
+   }
+  },
+  "3004753838-2025-028596": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000135,
+    "latency_s": 0.751
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000135,
+    "latency_s": 0.751
+   }
+  },
+  "3004753838-2025-028661": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS OCCURRED.",
+    "confidence": 0.75,
+    "notes": [],
+    "cost_usd": 0.000211,
+    "latency_s": 1.52
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS OCCURRED.",
+    "confidence": 0.75,
+    "notes": [],
+    "cost_usd": 0.000211,
+    "latency_s": 1.52
+   }
+  },
+  "3004753838-2025-028782": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000234,
+    "latency_s": 0.712
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000234,
+    "latency_s": 0.712
+   }
+  },
+  "3004753838-2025-143405": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000164,
+    "latency_s": 0.734
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000164,
+    "latency_s": 0.734
+   }
+  },
+  "3004753838-2025-143730": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000257,
+    "latency_s": 1.353
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000257,
+    "latency_s": 1.353
+   }
+  },
+  "3004753838-2025-144648": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000166,
+    "latency_s": 0.749
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT AN ALERT/NOTIFICATION SETTINGS ISSUE OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000166,
+    "latency_s": 0.749
+   }
+  },
+  "3004753838-2025-148359": {
+   "llm": {
+    "mode": "alert_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT ALERT NOTIFICATION OCCURRED.",
+    "confidence": 0.7,
+    "notes": [],
+    "cost_usd": 0.000236,
+    "latency_s": 1.44
+   },
+   "hybrid": {
+    "mode": "alert_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT ALERT NOTIFICATION OCCURRED.",
+    "confidence": 0.7,
+    "notes": [],
+    "cost_usd": 0.000236,
+    "latency_s": 1.44
+   }
+  },
+  "3004753838-2025-022808": {
+   "llm": {
+    "mode": "inaccurate_readings",
+    "method": "llm",
+    "evidence": "AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) AND THE BLOOD GLUCOSE (BG) METER OCCURRED",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000161,
+    "latency_s": 0.772
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "AN INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR (CGM) AND THE BLOOD GLUCOSE (BG) METER OCCURRED",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000161,
+    "latency_s": 0.772
+   }
+  },
+  "3004753838-2025-022900": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.00031,
+    "latency_s": 1.389
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "INACCURACY BETWEEN THE CONTINUOUS GLUCOSE MONITOR",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says inaccurate_readings; LLM said needs_review"
+    ],
+    "cost_usd": 0.00031,
+    "latency_s": 1.389
+   }
+  },
+  "3004753838-2025-020314": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "A DETACHED OR MISSING SENSOR WIRE OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000118,
+    "latency_s": 0.803
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "A DETACHED OR MISSING SENSOR WIRE OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000118,
+    "latency_s": 0.803
+   }
+  },
+  "3004753838-2025-020354": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "A DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000118,
+    "latency_s": 0.716
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "A DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000118,
+    "latency_s": 0.716
+   }
+  },
+  "3004753838-2025-020363": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "A DETACHED NEEDLE OR CANNULA OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000117,
+    "latency_s": 0.788
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "A DETACHED NEEDLE OR CANNULA OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000117,
+    "latency_s": 0.788
+   }
+  },
+  "3004753838-2025-020335": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "A DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000115,
+    "latency_s": 0.735
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "A DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000115,
+    "latency_s": 0.735
+   }
+  },
+  "3004753838-2025-031160": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000247,
+    "latency_s": 1.465
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "BRIEF SENSOR ISSUE OCCURRED",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says early_sensor_failure; LLM said needs_review"
+    ],
+    "cost_usd": 0.000247,
+    "latency_s": 1.465
+   }
+  },
+  "3004753838-2025-031156": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000251,
+    "latency_s": 1.44
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "BRIEF SENSOR ISSUE OCCURRED",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says early_sensor_failure; LLM said needs_review"
+    ],
+    "cost_usd": 0.000251,
+    "latency_s": 1.44
+   }
+  },
+  "3004753838-2025-196145": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000232,
+    "latency_s": 1.158
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION HAD OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000232,
+    "latency_s": 1.158
+   }
+  },
+  "3004753838-2025-196223": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000287,
+    "latency_s": 1.771
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "SKIN REACTION",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says skin_reaction; LLM said needs_review"
+    ],
+    "cost_usd": 0.000287,
+    "latency_s": 1.771
+   }
+  },
+  "3004753838-2025-197639": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000363,
+    "latency_s": 1.194
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000363,
+    "latency_s": 1.194
+   }
+  },
+  "3004753838-2025-198476": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYSTEM",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000174,
+    "latency_s": 0.674
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED WHILE USING THE DEXCOM G7 CGM SYSTEM",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000174,
+    "latency_s": 0.674
+   }
+  },
+  "3004753838-2025-028334": {
+   "llm": {
+    "mode": "receiver_hardware",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000235,
+    "latency_s": 3.859
+   },
+   "hybrid": {
+    "mode": "receiver_hardware",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000235,
+    "latency_s": 3.859
+   }
+  },
+  "3004753838-2025-028324": {
+   "llm": {
+    "mode": "receiver_hardware",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000116,
+    "latency_s": 0.819
+   },
+   "hybrid": {
+    "mode": "receiver_hardware",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A RECEIVER REINITIALIZATION OCCURRED.",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000116,
+    "latency_s": 0.819
+   }
+  },
+  "3004753838-2025-028462": {
+   "llm": {
+    "mode": "receiver_hardware",
+    "method": "llm",
+    "evidence": "AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000147,
+    "latency_s": 0.706
+   },
+   "hybrid": {
+    "mode": "receiver_hardware",
+    "method": "hybrid",
+    "evidence": "AN UNEXPECTED RECEIVER SHUTDOWN OCCURRED",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000147,
+    "latency_s": 0.706
+   }
+  },
+  "3004753838-2025-028466": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000252,
+    "latency_s": 1.579
+   },
+   "hybrid": {
+    "mode": "receiver_hardware",
+    "method": "hybrid",
+    "evidence": "RECEIVER SHUTDOWN OCCURRED",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says receiver_hardware; LLM said needs_review"
+    ],
+    "cost_usd": 0.000252,
+    "latency_s": 1.579
+   }
+  },
+  "3004753838-2025-031215": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000253,
+    "latency_s": 1.808
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "READINGS FROZE",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says app_software; LLM said needs_review"
+    ],
+    "cost_usd": 0.000253,
+    "latency_s": 1.808
+   }
+  },
+  "3004753838-2025-031270": {
+   "llm": {
+    "mode": "app_software",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT THE READINGS FROZE.",
+    "confidence": 0.7,
+    "notes": [],
+    "cost_usd": 0.000176,
+    "latency_s": 1.298
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT THE READINGS FROZE.",
+    "confidence": 0.7,
+    "notes": [],
+    "cost_usd": 0.000176,
+    "latency_s": 1.298
+   }
+  },
+  "3004753838-2025-031321": {
+   "llm": {
+    "mode": "app_software",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT THE READINGS FROZE.",
+    "confidence": 0.7,
+    "notes": [],
+    "cost_usd": 0.000186,
+    "latency_s": 1.399
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT THE READINGS FROZE.",
+    "confidence": 0.7,
+    "notes": [],
+    "cost_usd": 0.000186,
+    "latency_s": 1.399
+   }
+  },
+  "3004753838-2025-031355": {
+   "llm": {
+    "mode": "app_software",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.00018,
+    "latency_s": 1.066
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A DEXCOM APP CRASH OCCURRED",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.00018,
+    "latency_s": 1.066
+   }
+  },
+  "3004753838-2025-240382": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000191,
+    "latency_s": 0.705
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION ISSUE OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000191,
+    "latency_s": 0.705
+   }
+  },
+  "3004753838-2025-240815": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000257,
+    "latency_s": 1.103
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A DETACHED SENSOR WIRE OCCURRED.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000257,
+    "latency_s": 1.103
+   }
+  },
+  "3004753838-2025-240840": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000338,
+    "latency_s": 2.091
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "WEARABLE FAILURE OCCURRED",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says early_sensor_failure; LLM said needs_review"
+    ],
+    "cost_usd": 0.000338,
+    "latency_s": 2.091
+   }
+  },
+  "3004753838-2025-240837": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED.",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000186,
+    "latency_s": 0.738
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED.",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000186,
+    "latency_s": 0.738
+   }
+  },
+  "MW5166601": {
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "WE HAVE HAD 9, YES NINE, FAIL EARLY.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000287,
+    "latency_s": 1.435
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "WE HAVE HAD 9, YES NINE, FAIL EARLY.",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000287,
+    "latency_s": 1.435
+   }
+  },
+  "3004753838-2025-042594": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000251,
+    "latency_s": 1.7
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "SENSOR WIRE OCCURRED",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says sensor_wire_or_needle; LLM said needs_review"
+    ],
+    "cost_usd": 0.000251,
+    "latency_s": 1.7
+   }
+  },
+  "3004753838-2025-043034": {
+   "llm": {
+    "mode": "inaccurate_readings",
+    "method": "llm",
+    "evidence": "THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000205,
+    "latency_s": 1.483
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "THE REPORTED GLUCOSE VALUES FALL WITHIN THE B ZONE",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000205,
+    "latency_s": 1.483
+   }
+  },
+  "3004753838-2025-043101": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "THE PATIENT EXPERIENCED A SKIN REACTION",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000151,
+    "latency_s": 0.738
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "THE PATIENT EXPERIENCED A SKIN REACTION",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000151,
+    "latency_s": 0.738
+   }
+  },
+  "3004753838-2025-043623": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "THE PATIENT DEVELOPED A PUSTULE AND A SKIN INFECTION AT THE NEEDLE PUNCTURE SITE",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000161,
+    "latency_s": 0.783
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "THE PATIENT DEVELOPED A PUSTULE AND A SKIN INFECTION AT THE NEEDLE PUNCTURE SITE",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000161,
+    "latency_s": 0.783
+   }
+  },
+  "3004753838-2025-043753": {
+   "llm": {
+    "mode": "app_software",
+    "method": "llm",
+    "evidence": "READING IS STUCK AT 208.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000147,
+    "latency_s": 1.07
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "READING IS STUCK AT 208.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000147,
+    "latency_s": 1.07
+   }
+  },
+  "3004753838-2025-043678": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000125,
+    "latency_s": 0.832
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000125,
+    "latency_s": 0.832
+   }
+  },
+  "3004753838-2025-044599": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "THE PATIENT EXPERIENCED INFLAMMATION, AND INFECTION UNDER THE ENTIRE PATCH AREA",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000171,
+    "latency_s": 0.761
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "THE PATIENT EXPERIENCED INFLAMMATION, AND INFECTION UNDER THE ENTIRE PATCH AREA",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000171,
+    "latency_s": 0.761
+   }
+  },
+  "3004753838-2025-044629": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "THE PATIENT EXPERIENCED INFLAMMATION AND PAIN THAT EXTENDED BEYOND THE PATCH PERIMETER",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000156,
+    "latency_s": 0.71
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "THE PATIENT EXPERIENCED INFLAMMATION AND PAIN THAT EXTENDED BEYOND THE PATCH PERIMETER",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000156,
+    "latency_s": 0.71
+   }
+  },
+  "3004753838-2025-044660": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000121,
+    "latency_s": 0.738
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000121,
+    "latency_s": 0.738
+   }
+  },
+  "3004753838-2025-044761": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000238,
+    "latency_s": 1.541
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED BROKEN SENSOR WIRE OCCURRED.",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000238,
+    "latency_s": 1.541
+   }
+  },
+  "3004753838-2025-045295": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000238,
+    "latency_s": 1.365
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000238,
+    "latency_s": 1.365
+   }
+  },
+  "3004753838-2025-046144": {
+   "llm": {
+    "mode": "other",
+    "method": "llm",
+    "evidence": "DON ABBEY ORG Q1 2025 \"ALL HANDS\" MEETING.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000141,
+    "latency_s": 0.958
+   },
+   "hybrid": {
+    "mode": "other",
+    "method": "hybrid",
+    "evidence": "DON ABBEY ORG Q1 2025 \"ALL HANDS\" MEETING.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000141,
+    "latency_s": 0.958
+   }
+  },
+  "MW5166834": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.00024,
+    "latency_s": 1.859
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.00024,
+    "latency_s": 1.859
+   }
+  },
+  "3004753838-2025-046285": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000135,
+    "latency_s": 0.868
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED DETACHED OR MISSING SENSOR WIRE OCCURRED",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000135,
+    "latency_s": 0.868
+   }
+  },
+  "3004753838-2025-046426": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00011,
+    "latency_s": 0.738
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "THE COMPLAINT STATES SIGNAL LOSS WAS REPORTED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00011,
+    "latency_s": 0.738
+   }
+  },
+  "MW5173829": {
+   "llm": {
+    "mode": "adhesion",
+    "method": "llm",
+    "evidence": "2 DEXCOM SENSORS FELL OFF WITHIN 24 HOURS OF USING.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000125,
+    "latency_s": 0.728
+   },
+   "hybrid": {
+    "mode": "adhesion",
+    "method": "hybrid",
+    "evidence": "2 DEXCOM SENSORS FELL OFF WITHIN 24 HOURS OF USING.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000125,
+    "latency_s": 0.728
+   }
+  },
+  "MW5173996": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000245,
+    "latency_s": 1.651
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000245,
+    "latency_s": 1.651
+   }
+  },
+  "3004753838-2025-214778": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000326,
+    "latency_s": 1.83
+   },
+   "hybrid": {
+    "mode": "adhesion",
+    "method": "hybrid",
+    "evidence": "FELL OFF",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON",
+     "template allegation says adhesion; LLM said needs_review"
+    ],
+    "cost_usd": 0.000326,
+    "latency_s": 1.83
+   }
+  },
+  "3004753838-2025-215393": {
+   "llm": {
+    "mode": "skin_reaction",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000221,
+    "latency_s": 1.203
+   },
+   "hybrid": {
+    "mode": "skin_reaction",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A SKIN REACTION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000221,
+    "latency_s": 1.203
+   }
+  },
+  "3004753838-2025-028619": {
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00012,
+    "latency_s": 0.751
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00012,
+    "latency_s": 0.751
+   }
+  },
+  "3004753838-2025-028798": {
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00012,
+    "latency_s": 0.789
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00012,
+    "latency_s": 0.789
+   }
+  },
+  "3004753838-2025-028908": {
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00012,
+    "latency_s": 0.774
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT EARLY SENSOR EXPIRATION OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.00012,
+    "latency_s": 0.774
+   }
+  },
+  "3004753838-2025-044270": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000123,
+    "latency_s": 0.769
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000123,
+    "latency_s": 0.769
+   }
+  },
+  "3004753838-2025-044284": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000127,
+    "latency_s": 0.716
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "IT WAS REPORTED THAT A PAIRING ISSUE OCCURRED",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000127,
+    "latency_s": 0.716
+   }
+  },
+  "3004753838-2025-019283": {
+   "llm": {
+    "mode": "app_software",
+    "method": "llm",
+    "evidence": "A DEXCOM APP CRASH OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000105,
+    "latency_s": 0.753
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "A DEXCOM APP CRASH OCCURRED",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000105,
+    "latency_s": 0.753
+   }
+  },
+  "3004753838-2025-019397": {
+   "llm": {
+    "mode": "app_software",
+    "method": "llm",
+    "evidence": "A DEXCOM APP CRASH OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000106,
+    "latency_s": 0.771
+   },
+   "hybrid": {
+    "mode": "app_software",
+    "method": "hybrid",
+    "evidence": "A DEXCOM APP CRASH OCCURRED.",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000106,
+    "latency_s": 0.771
+   }
+  },
+  "MW5164087": {
+   "llm": {
+    "mode": "inaccurate_readings",
+    "method": "llm",
+    "evidence": "CONTINUES TO GIVE INACCURATE READINGS",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000105,
+    "latency_s": 0.729
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "CONTINUES TO GIVE INACCURATE READINGS",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000105,
+    "latency_s": 0.729
+   }
+  },
+  "MW5164098": {
+   "llm": {
+    "mode": "inaccurate_readings",
+    "method": "llm",
+    "evidence": "CONSTANT WRONG READINGS",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000212,
+    "latency_s": 1.193
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "CONSTANT WRONG READINGS",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000212,
+    "latency_s": 1.193
+   }
+  },
+  "MW5164137": {
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "TWO OF THREE DEXCOM G7 SENSOR FAILURES YESTERDAY",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000114,
+    "latency_s": 0.738
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "TWO OF THREE DEXCOM G7 SENSOR FAILURES YESTERDAY",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000114,
+    "latency_s": 0.738
+   }
+  },
+  "MW5164147": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "EIGHT SENSORS WERE MISSING THE INJECTION SPRING THAT LATCHES ONTO THE SKIN",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000242,
+    "latency_s": 1.369
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "EIGHT SENSORS WERE MISSING THE INJECTION SPRING THAT LATCHES ONTO THE SKIN",
+    "confidence": 0.8,
+    "notes": [],
+    "cost_usd": 0.000242,
+    "latency_s": 1.369
+   }
+  },
+  "MW5164166": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.00029,
+    "latency_s": 1.855
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.00029,
+    "latency_s": 1.855
+   }
+  },
+  "MW5164199": {
+   "llm": {
+    "mode": "early_sensor_failure",
+    "method": "llm",
+    "evidence": "MY DEXCOM G7 FAILED.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000165,
+    "latency_s": 1.098
+   },
+   "hybrid": {
+    "mode": "early_sensor_failure",
+    "method": "hybrid",
+    "evidence": "MY DEXCOM G7 FAILED.",
+    "confidence": 0.6,
+    "notes": [],
+    "cost_usd": 0.000165,
+    "latency_s": 1.098
+   }
+  },
+  "MW5164200": {
+   "llm": {
+    "mode": "adhesion",
+    "method": "llm",
+    "evidence": "MY DEXCOM G7 SENSOR BEGAN LIFTING.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000159,
+    "latency_s": 1.385
+   },
+   "hybrid": {
+    "mode": "adhesion",
+    "method": "hybrid",
+    "evidence": "MY DEXCOM G7 SENSOR BEGAN LIFTING.",
+    "confidence": 0.95,
+    "notes": [],
+    "cost_usd": 0.000159,
+    "latency_s": 1.385
+   }
+  },
+  "MW5164208": {
+   "llm": {
+    "mode": "adhesion",
+    "method": "llm",
+    "evidence": "1 OF EVERY 3 SENSORS FALL OFF",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000119,
+    "latency_s": 0.707
+   },
+   "hybrid": {
+    "mode": "adhesion",
+    "method": "hybrid",
+    "evidence": "1 OF EVERY 3 SENSORS FALL OFF",
+    "confidence": 0.97,
+    "notes": [],
+    "cost_usd": 0.000119,
+    "latency_s": 0.707
+   }
+  },
+  "MW5164243": {
+   "llm": {
+    "mode": "inaccurate_readings",
+    "method": "llm",
+    "evidence": "CGM READING WAS OFF BY OVER 100 POINTS",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000117,
+    "latency_s": 0.728
+   },
+   "hybrid": {
+    "mode": "inaccurate_readings",
+    "method": "hybrid",
+    "evidence": "CGM READING WAS OFF BY OVER 100 POINTS",
+    "confidence": 0.93,
+    "notes": [],
+    "cost_usd": 0.000117,
+    "latency_s": 0.728
+   }
+  },
+  "MW5164276": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "SENSORS THAT FAILED TO INITIALLY PAIR WITH MY PHONE",
+    "confidence": 0.88,
+    "notes": [],
+    "cost_usd": 0.000236,
+    "latency_s": 1.292
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "SENSORS THAT FAILED TO INITIALLY PAIR WITH MY PHONE",
+    "confidence": 0.88,
+    "notes": [],
+    "cost_usd": 0.000236,
+    "latency_s": 1.292
+   }
+  },
+  "MW5168389": {
+   "llm": {
+    "mode": "needs_review",
+    "method": "llm",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000233,
+    "latency_s": 1.591
+   },
+   "hybrid": {
+    "mode": "needs_review",
+    "method": "hybrid",
+    "evidence": "",
+    "confidence": null,
+    "notes": [
+     "answer was not JSON"
+    ],
+    "cost_usd": 0.000233,
+    "latency_s": 1.591
+   }
+  },
+  "MW5168400": {
+   "llm": {
+    "mode": "signal_loss",
+    "method": "llm",
+    "evidence": "THE DEVICE FAILS SEVERAL TIMES A DAY FOR HOURS ON END",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000258,
+    "latency_s": 1.571
+   },
+   "hybrid": {
+    "mode": "signal_loss",
+    "method": "hybrid",
+    "evidence": "THE DEVICE FAILS SEVERAL TIMES A DAY FOR HOURS ON END",
+    "confidence": 0.9,
+    "notes": [],
+    "cost_usd": 0.000258,
+    "latency_s": 1.571
+   }
+  },
+  "MW5174608": {
+   "llm": {
+    "mode": "sensor_wire_or_needle",
+    "method": "llm",
+    "evidence": "THE SENSORS DO NOT ALWAYS DEPLOY, MAKING THEM DEFECTIVE",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000265,
+    "latency_s": 1.809
+   },
+   "hybrid": {
+    "mode": "sensor_wire_or_needle",
+    "method": "hybrid",
+    "evidence": "THE SENSORS DO NOT ALWAYS DEPLOY, MAKING THEM DEFECTIVE",
+    "confidence": 0.85,
+    "notes": [],
+    "cost_usd": 0.000265,
+    "latency_s": 1.809
+   }
+  }
+ }
+}

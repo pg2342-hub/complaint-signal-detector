@@ -1,0 +1,1003 @@
+[
+ {
+  "id": "receiver_speaker_recall",
+  "title": "Receiver speaker recall (Class I, Z-1944-2025)",
+  "date": "2025-05-12",
+  "mode": "alert_failure",
+  "source": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfres/res.cfm?id=213508",
+  "detail": "Defective foam or an assembly error may stop the receiver speaker from sounding low and high alerts. Firm initiated May 12, 2025.",
+  "caught_before_event": false,
+  "first_flag_as_of": null,
+  "lead_days": null,
+  "timeline": [
+   {
+    "as_of": "2025-02-17",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 401,
+     "expected": 313.5253,
+     "ratio": 1.279,
+     "p_value": 1.2e-06,
+     "share": 0.0344,
+     "baseline_share": 0.0269,
+     "completeness": 0.7777,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-02-24",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 401,
+     "expected": 318.0166,
+     "ratio": 1.2609,
+     "p_value": 4.23e-06,
+     "share": 0.0339,
+     "baseline_share": 0.0269,
+     "completeness": 0.7881,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-03",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 402,
+     "expected": 322.0143,
+     "ratio": 1.2484,
+     "p_value": 9.66e-06,
+     "share": 0.0335,
+     "baseline_share": 0.0268,
+     "completeness": 0.7981,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-10",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 404,
+     "expected": 326.9469,
+     "ratio": 1.2357,
+     "p_value": 2.14e-05,
+     "share": 0.0331,
+     "baseline_share": 0.0268,
+     "completeness": 0.8103,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-17",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 405,
+     "expected": 330.9728,
+     "ratio": 1.2237,
+     "p_value": 4.55e-05,
+     "share": 0.0328,
+     "baseline_share": 0.0268,
+     "completeness": 0.8203,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-24",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 332.5083,
+     "ratio": 1.224,
+     "p_value": 4.27e-05,
+     "share": 0.0328,
+     "baseline_share": 0.0268,
+     "completeness": 0.8241,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-31",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 333.6849,
+     "ratio": 1.2197,
+     "p_value": 5.63e-05,
+     "share": 0.0327,
+     "baseline_share": 0.0268,
+     "completeness": 0.8266,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-07",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 334.4765,
+     "ratio": 1.2168,
+     "p_value": 6.75e-05,
+     "share": 0.0326,
+     "baseline_share": 0.0268,
+     "completeness": 0.8283,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-14",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 335.2532,
+     "ratio": 1.214,
+     "p_value": 8.06e-05,
+     "share": 0.0325,
+     "baseline_share": 0.0268,
+     "completeness": 0.8295,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-21",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 335.5966,
+     "ratio": 1.2128,
+     "p_value": 8.71e-05,
+     "share": 0.0325,
+     "baseline_share": 0.0268,
+     "completeness": 0.8303,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-28",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 336.0156,
+     "ratio": 1.2113,
+     "p_value": 9.57e-05,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8314,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-05",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 408,
+     "expected": 336.7413,
+     "ratio": 1.2116,
+     "p_value": 9.19e-05,
+     "share": 0.0325,
+     "baseline_share": 0.0268,
+     "completeness": 0.8328,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-12",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 408,
+     "expected": 336.8589,
+     "ratio": 1.2112,
+     "p_value": 9.43e-05,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8331,
+     "flagged": false
+    }
+   }
+  ]
+ },
+ {
+  "id": "ios_app_stale_glucose_correction",
+  "title": "iOS app 2.7.0 correction for stale glucose values (Class II, Z-1906-2025)",
+  "date": "2025-05-05",
+  "mode": "app_software",
+  "source": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=213398",
+  "detail": "A bug could leave the app showing an old glucose value without updating it, so alerts might not trigger. Firm initiated May 5, 2025.",
+  "caught_before_event": false,
+  "first_flag_as_of": null,
+  "lead_days": null,
+  "timeline": [
+   {
+    "as_of": "2025-02-10",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2222,
+     "expected": 1997.9945,
+     "ratio": 1.1121,
+     "p_value": 4.44e-07,
+     "share": 0.1228,
+     "baseline_share": 0.1104,
+     "completeness": 1.271,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-02-17",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2222,
+     "expected": 2000.3327,
+     "ratio": 1.1108,
+     "p_value": 5.82e-07,
+     "share": 0.1226,
+     "baseline_share": 0.1104,
+     "completeness": 1.2725,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-02-24",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2222,
+     "expected": 2002.4726,
+     "ratio": 1.1096,
+     "p_value": 7.44e-07,
+     "share": 0.1224,
+     "baseline_share": 0.1103,
+     "completeness": 1.2738,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-03",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2224,
+     "expected": 2003.612,
+     "ratio": 1.11,
+     "p_value": 6.82e-07,
+     "share": 0.1224,
+     "baseline_share": 0.1103,
+     "completeness": 1.2746,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-10",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2226,
+     "expected": 2005.7363,
+     "ratio": 1.1098,
+     "p_value": 7e-07,
+     "share": 0.1224,
+     "baseline_share": 0.1103,
+     "completeness": 1.2759,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-17",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2226,
+     "expected": 2007.2049,
+     "ratio": 1.109,
+     "p_value": 8.27e-07,
+     "share": 0.1223,
+     "baseline_share": 0.1102,
+     "completeness": 1.2768,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-24",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2227,
+     "expected": 2007.8844,
+     "ratio": 1.1091,
+     "p_value": 8.02e-07,
+     "share": 0.1223,
+     "baseline_share": 0.1102,
+     "completeness": 1.2771,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-03-31",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2228,
+     "expected": 2008.304,
+     "ratio": 1.1094,
+     "p_value": 7.56e-07,
+     "share": 0.1223,
+     "baseline_share": 0.1102,
+     "completeness": 1.2774,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-07",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2229,
+     "expected": 2008.8409,
+     "ratio": 1.1096,
+     "p_value": 7.21e-07,
+     "share": 0.1223,
+     "baseline_share": 0.1102,
+     "completeness": 1.2778,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-14",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2229,
+     "expected": 2009.2439,
+     "ratio": 1.1094,
+     "p_value": 7.55e-07,
+     "share": 0.1222,
+     "baseline_share": 0.1102,
+     "completeness": 1.278,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-21",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2229,
+     "expected": 2009.3397,
+     "ratio": 1.1093,
+     "p_value": 7.63e-07,
+     "share": 0.1222,
+     "baseline_share": 0.1102,
+     "completeness": 1.2781,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-04-28",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2024-10",
+     "observed": 2229,
+     "expected": 2009.6161,
+     "ratio": 1.1092,
+     "p_value": 7.87e-07,
+     "share": 0.1222,
+     "baseline_share": 0.1102,
+     "completeness": 1.2782,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-05",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "app_software",
+     "month": "2025-01",
+     "observed": 1202,
+     "expected": 1331.462,
+     "ratio": 0.9028,
+     "p_value": 1.0,
+     "share": 0.0817,
+     "baseline_share": 0.0905,
+     "completeness": 0.9787,
+     "flagged": false
+    }
+   }
+  ]
+ },
+ {
+  "id": "app_sensor_failed_alert_correction",
+  "title": "G7 app correction for a missing \"Sensor Failed\" alert (Class I, Z-2447-2025)",
+  "date": "2025-07-24",
+  "mode": "alert_failure",
+  "source": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=215006",
+  "detail": "When the transmitter reported a failure, the app ended the session without a \"Sensor Failed\" alert, so glucose readings stopped without warning. Firm initiated July 24, 2025.",
+  "caught_before_event": true,
+  "first_flag_as_of": "2025-07-10",
+  "lead_days": 14,
+  "timeline": [
+   {
+    "as_of": "2025-05-01",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 407,
+     "expected": 336.418,
+     "ratio": 1.2098,
+     "p_value": 0.000105,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8324,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-08",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 408,
+     "expected": 336.7853,
+     "ratio": 1.2115,
+     "p_value": 9.28e-05,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8329,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-15",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 408,
+     "expected": 337.059,
+     "ratio": 1.2105,
+     "p_value": 9.87e-05,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8336,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-22",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 408,
+     "expected": 337.5199,
+     "ratio": 1.2088,
+     "p_value": 0.000109,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8341,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-05-29",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 408,
+     "expected": 337.6478,
+     "ratio": 1.2084,
+     "p_value": 0.000112,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8344,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-06-05",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 409,
+     "expected": 338.2518,
+     "ratio": 1.2092,
+     "p_value": 0.000105,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8355,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-06-12",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 410,
+     "expected": 338.5712,
+     "ratio": 1.211,
+     "p_value": 9.22e-05,
+     "share": 0.0325,
+     "baseline_share": 0.0268,
+     "completeness": 0.836,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-06-19",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 410,
+     "expected": 339.0941,
+     "ratio": 1.2091,
+     "p_value": 0.000104,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8362,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-06-26",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2024-12",
+     "observed": 410,
+     "expected": 339.1671,
+     "ratio": 1.2088,
+     "p_value": 0.000105,
+     "share": 0.0324,
+     "baseline_share": 0.0268,
+     "completeness": 0.8364,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-07-03",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-01",
+     "observed": 461,
+     "expected": 404.6374,
+     "ratio": 1.1393,
+     "p_value": 0.00322,
+     "share": 0.0311,
+     "baseline_share": 0.0273,
+     "completeness": 0.9853,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2025-07-10",
+    "flagged": true,
+    "flagged_months": [
+     {
+      "mode": "alert_failure",
+      "month": "2025-06",
+      "observed": 532,
+      "expected": 264.089,
+      "ratio": 2.0145,
+      "p_value": 1.18e-47,
+      "share": 0.0526,
+      "baseline_share": 0.0261,
+      "completeness": 0.5351,
+      "flagged": true
+     }
+    ],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-06",
+     "observed": 532,
+     "expected": 264.089,
+     "ratio": 2.0145,
+     "p_value": 1.18e-47,
+     "share": 0.0526,
+     "baseline_share": 0.0261,
+     "completeness": 0.5351,
+     "flagged": true
+    }
+   },
+   {
+    "as_of": "2025-07-17",
+    "flagged": true,
+    "flagged_months": [
+     {
+      "mode": "alert_failure",
+      "month": "2025-06",
+      "observed": 767,
+      "expected": 402.8301,
+      "ratio": 1.904,
+      "p_value": 1.34e-58,
+      "share": 0.0499,
+      "baseline_share": 0.0262,
+      "completeness": 0.8086,
+      "flagged": true
+     }
+    ],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-06",
+     "observed": 767,
+     "expected": 402.8301,
+     "ratio": 1.904,
+     "p_value": 1.34e-58,
+     "share": 0.0499,
+     "baseline_share": 0.0262,
+     "completeness": 0.8086,
+     "flagged": true
+    }
+   },
+   {
+    "as_of": "2025-07-24",
+    "flagged": true,
+    "flagged_months": [
+     {
+      "mode": "alert_failure",
+      "month": "2025-06",
+      "observed": 1041,
+      "expected": 503.8674,
+      "ratio": 2.066,
+      "p_value": 3.96e-97,
+      "share": 0.0543,
+      "baseline_share": 0.0263,
+      "completeness": 1.0047,
+      "flagged": true
+     }
+    ],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-06",
+     "observed": 1041,
+     "expected": 503.8674,
+     "ratio": 2.066,
+     "p_value": 3.96e-97,
+     "share": 0.0543,
+     "baseline_share": 0.0263,
+     "completeness": 1.0047,
+     "flagged": true
+    }
+   }
+  ]
+ },
+ {
+  "id": "ios_app_alert_delay_correction",
+  "title": "iOS app correction for delayed glucose values and alerts (Z-2163-2026)",
+  "date": "2026-04-14",
+  "mode": "alert_failure",
+  "source": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRES/res.cfm?id=219288",
+  "detail": "A software defect could delay glucose values and alerts while the app ran in the background. Firm initiated April 14, 2026.",
+  "caught_before_event": true,
+  "first_flag_as_of": "2026-01-20",
+  "lead_days": 84,
+  "timeline": [
+   {
+    "as_of": "2026-01-20",
+    "flagged": true,
+    "flagged_months": [
+     {
+      "mode": "alert_failure",
+      "month": "2025-07",
+      "observed": 5094,
+      "expected": 871.7772,
+      "ratio": 5.8432,
+      "p_value": 0.0,
+      "share": 0.1834,
+      "baseline_share": 0.0314,
+      "completeness": 1.2253,
+      "flagged": true
+     }
+    ],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-07",
+     "observed": 5094,
+     "expected": 871.7772,
+     "ratio": 5.8432,
+     "p_value": 0.0,
+     "share": 0.1834,
+     "baseline_share": 0.0314,
+     "completeness": 1.2253,
+     "flagged": true
+    }
+   },
+   {
+    "as_of": "2026-01-27",
+    "flagged": true,
+    "flagged_months": [
+     {
+      "mode": "alert_failure",
+      "month": "2025-07",
+      "observed": 5096,
+      "expected": 871.766,
+      "ratio": 5.8456,
+      "p_value": 0.0,
+      "share": 0.1833,
+      "baseline_share": 0.0314,
+      "completeness": 1.2253,
+      "flagged": true
+     }
+    ],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-07",
+     "observed": 5096,
+     "expected": 871.766,
+     "ratio": 5.8456,
+     "p_value": 0.0,
+     "share": 0.1833,
+     "baseline_share": 0.0314,
+     "completeness": 1.2253,
+     "flagged": true
+    }
+   },
+   {
+    "as_of": "2026-02-03",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-08",
+     "observed": 2354,
+     "expected": 1587.0901,
+     "ratio": 1.4832,
+     "p_value": 2.81e-72,
+     "share": 0.0901,
+     "baseline_share": 0.0607,
+     "completeness": 1.0712,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-02-10",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-08",
+     "observed": 2354,
+     "expected": 1587.4639,
+     "ratio": 1.4829,
+     "p_value": 3.37e-72,
+     "share": 0.09,
+     "baseline_share": 0.0607,
+     "completeness": 1.0713,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-02-17",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-08",
+     "observed": 2355,
+     "expected": 1588.142,
+     "ratio": 1.4829,
+     "p_value": 3.15e-72,
+     "share": 0.09,
+     "baseline_share": 0.0607,
+     "completeness": 1.0715,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-02-24",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-08",
+     "observed": 2355,
+     "expected": 1588.4268,
+     "ratio": 1.4826,
+     "p_value": 3.62e-72,
+     "share": 0.09,
+     "baseline_share": 0.0607,
+     "completeness": 1.0716,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-03-03",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-09",
+     "observed": 1653,
+     "expected": 1396.1868,
+     "ratio": 1.1839,
+     "p_value": 1.29e-11,
+     "share": 0.0829,
+     "baseline_share": 0.07,
+     "completeness": 0.7814,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-03-10",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2025-09",
+     "observed": 1654,
+     "expected": 1396.4095,
+     "ratio": 1.1845,
+     "p_value": 1.13e-11,
+     "share": 0.0829,
+     "baseline_share": 0.07,
+     "completeness": 0.7814,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-03-17",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2026-02",
+     "observed": 909,
+     "expected": 725.2027,
+     "ratio": 1.2534,
+     "p_value": 2.83e-11,
+     "share": 0.0783,
+     "baseline_share": 0.0624,
+     "completeness": 0.6295,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-03-24",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2026-02",
+     "observed": 1113,
+     "expected": 803.2852,
+     "ratio": 1.3856,
+     "p_value": 3.22e-25,
+     "share": 0.0865,
+     "baseline_share": 0.0624,
+     "completeness": 0.6964,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-03-31",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2026-02",
+     "observed": 1166,
+     "expected": 829.1672,
+     "ratio": 1.4062,
+     "p_value": 1.8e-28,
+     "share": 0.0878,
+     "baseline_share": 0.0625,
+     "completeness": 0.7173,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-04-07",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2026-02",
+     "observed": 1177,
+     "expected": 838.9321,
+     "ratio": 1.403,
+     "p_value": 2.23e-28,
+     "share": 0.0876,
+     "baseline_share": 0.0624,
+     "completeness": 0.7252,
+     "flagged": false
+    }
+   },
+   {
+    "as_of": "2026-04-14",
+    "flagged": false,
+    "flagged_months": [],
+    "strongest": {
+     "mode": "alert_failure",
+     "month": "2026-02",
+     "observed": 1187,
+     "expected": 846.9376,
+     "ratio": 1.4015,
+     "p_value": 1.89e-28,
+     "share": 0.0875,
+     "baseline_share": 0.0624,
+     "completeness": 0.7316,
+     "flagged": false
+    }
+   }
+  ]
+ }
+]
