@@ -51,7 +51,7 @@ August 2026 it surfaced a new allegation wording, "pairing failure occurred", co
 then added to the signal-loss phrases (see `phrase_log` in the config).
 
 Two fixes came out of the first runs and are in the history: the model's answer is now a structured JSON output with
-room to think (the first run cut answers off at 300 tokens), and the template guardrail now reads only the allegation
+room to think (in the first run, 15 of 76 answers could not be parsed, most likely cut off by a 300-token limit), and the template guardrail now reads only the allegation
 sentence (it had let a "came off" later in a narrative override a correct "inaccurate readings" answer).
 
 ## The tagger and its guardrails
